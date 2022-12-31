@@ -1,0 +1,28 @@
+
+
+    @font-face {
+      font-family: "east";
+      src: url(./Fonts/Fontspring-DEMO-engram-semibold.otf) 
+    }
+
+     @font-face {
+              font-family: "normal";
+               src: url(./Fonts/Fontspring-DEMO-engram-regular.otf)
+          }
+
+
+    .eastman{
+      font-family:'east';
+    }
+
+    .normal{
+      font-family: 'normal'
+    }
+
+    .bgg{
+      background-image: url(./Images/Ausbg.png);
+    }
+
+
+
+   
