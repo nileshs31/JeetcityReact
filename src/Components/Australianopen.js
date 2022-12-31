@@ -7,6 +7,7 @@ import gift from "../Images/gift.png";
 const Australianopen = () => {
   return (
     <div className="text-white">
+      <p>check </p>
       <header className="flex justify-between items-center p-3">
         <img src={logo} alt="logo" className="w-[132px] h-[34px]" />
         <button className="bg-[#48b415] p-2 px-4 rounded-3xl font-medium text-center">
