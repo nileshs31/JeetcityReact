@@ -143,6 +143,8 @@ const Home = () => {
         <img src={p11} />
         <img src={p12} />
         <img src={p13} />
+      
+
       </footer>
     </div>
   );

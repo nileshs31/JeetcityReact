@@ -33,10 +33,17 @@ const Australianopen = () => {
         <p className="text-[32px] eastman text-center ">What should I do?</p>
         <div>
           <p className="text-[24px] normal text-center mt-8  ">
-            Совершай депозит от <span className="text-[#48B415]">30 евро с 16 по 29 января,</span>  получай <span className="text-[#48B415]"> 20% Onlywin
-            фрибет + Комбобуст 20% </span>на матчи АО2022. Когда турнир подойдет к
-            самому интересному (1/8 финала), то у тебя будет возможность
-            выиграть<span className="text-[#48B415]">iPhone 14 Pro MAX</span>  оставив свои прогнозы у нас.
+            Совершай депозит от{" "}
+            <span className="text-[#48B415]">30 евро с 16 по 29 января,</span>{" "}
+            получай{" "}
+            <span className="text-[#48B415]">
+              {" "}
+              20% Onlywin фрибет + Комбобуст 20%{" "}
+            </span>
+            на матчи АО2022. Когда турнир подойдет к самому интересному (1/8
+            финала), то у тебя будет возможность выиграть
+            <span className="text-[#48B415]">iPhone 14 Pro MAX</span> оставив
+            свои прогнозы у нас.
           </p>
         </div>
 
@@ -99,6 +106,192 @@ const Australianopen = () => {
           To participate in the promo, make a qualifying bet of 5+ euros on any
           tennis match.
         </p>
+      </div>
+
+      {/* predictions section  */}
+      <p className="text-center m-4">Your predictions</p>
+      <div className="  flex flex-col items-center w-full h-[1620px] mt-10">
+         <div className="w-[2px]   border-2  h-[1600px] flex flex-col items-center gap-[250px]  z-20">
+          <button className="px-20 mt-[5px]  p-[10px] bg-white text-black rounded-lg">Player</button>
+          <button className="px-20 -mt-[20px]  p-[10px] bg-white text-black rounded-lg">Player</button>
+          <button className="px-20 -mt-[100px] bg-white text-black p-[10px]  rounded-lg">Player</button>
+          <button className="px-20  mt-[290px] p-[10px] bg-white text-black rounded-lg">Player</button>
+          <button className="px-20 -mt-[105px]  p-[10px] bg-white text-black  rounded-lg">Player</button>
+          <button className="px-20 p-[10px]   -mt-[40px] bg-white text-black  rounded-lg">Player</button>
+
+
+   
+        </div>
+
+        <div className=" -mt-[1600px] w-[100%] md:w-[95%] lg:w-[90%] mx-auto ">
+    <div className="bg-[#34A2DB] p-3 lg:p-10 w-full h-auto md:h-[900px] rounded-t-[32px]">
+          <div className="border-2 border-white p-3 lg:p-8 grid sm:grid-cols-2 gap-8  rounded-[32px] mb-5">
+            <div className="grid grid-cols-2 gap-4 ">
+              <div className="w-full border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
+                <button className="px-4 p-3  bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+              </div>
+
+               <div className=" border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
+                <button className="px-4 p-3  bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+              </div>
+
+            
+            </div>
+
+             <div className="grid grid-cols-2 gap-4 w-full">
+              <div className=" border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
+                <button className="px-4 p-3  bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+              </div>
+
+               <div className=" border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
+                <button className="px-4 p-3  bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+              </div>
+
+            
+            </div>
+
+          </div>
+
+          <div className="border-2 my-10 grid grid-cols-2 gap-8 p-3 w-full lg:p-8 rounded-[32px]">
+            <div className="grid md:grid-cols-2 gap-5 p-3 border-2 lg:p-[16px] rounded-[16px]">
+              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+                Player Name
+              </button>
+              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+                Player Name
+              </button>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-5 p-3 lg:p-[16px] rounded-[16px] border-2">
+              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+                Player Name
+              </button>
+              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+                Player Name
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2  gap-5 border-2 p-8 my-5  w-full lg:max-w-[50%] mx-auto rounded-[32px]">
+            <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+              Player Name
+            </button>
+            <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+              Player Name
+            </button>
+          </div>
+
+          <div className=" flex flex-col mt-16  gap-5 w-[300px] mx-auto  border-2 p-4 rounded-[16px]  z-20">
+            <button className="px-4 p-3 bg-[#42475E] rounded-lg z-20">
+              Player Name
+            </button>
+            <button className="px-4 p-3 bg-white text-black rounded-lg z-20">
+              Player Name
+            </button>
+             <button className="px-4 p-3 bg-[#42475E] rounded-lg z-20">
+              Player Name
+            </button>
+          </div>
+        </div>
+
+     
+
+{/*  */}
+        <div className="bg-[#34A2DB] p-5 lg:p-10 w-full  h-[700px] rounded-b-[32px]">
+          <div className="  grid grid-cols-2  gap-5 border-2 p-3 lg:p-8 my-5  w-full lg:max-w-[50%] mx-auto rounded-[32px]">
+            <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+              Player Name
+            </button>
+            <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+              Player Name
+            </button>
+          </div>
+
+          <div className="border-2 my-10 grid grid-cols-2 gap-8 w-full p-8 rounded-[32px]">
+            <div className="grid md:grid-cols-2 gap-5 border-2 p-[16px] rounded-[16px]">
+              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+                Player Name
+              </button>
+              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+                Player Name
+              </button>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-5 border- p-[16px] rounded-[16px] border-2">
+              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+                Player Name
+              </button>
+              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
+                Player Name
+              </button>
+            </div>
+          </div>
+          <div className="border-2  border-white p-3 lg:p-8 grid sm:grid-cols-2 gap-8 rounded-[32px] mb-5">
+            <div className="grid grid-cols-2 gap-4 ">
+              <div className=" border-2 flex flex-col  items-center justify-center  p-2 lg:p-[16px] gap-[16px] rounded-[16px]">
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+              </div>
+
+              <div className="border-2 flex flex-col  items-center justify-center p-2 lg:p-[16px] gap-[16px] rounded-[16px] ">
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 ">
+
+              <div className="border-2  flex flex-col p-2 lg:p-[16px] gap-[16px] items-center justify-center rounded-[16px]">
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+              </div>
+              <div className="border-2 flex flex-col p-2  items-center justify-center lg:p-[16px] gap-[16px] rounded-[16px]">
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+                <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
+                  Player Name
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+        </div>
+    
       </div>
     </div>
   );
