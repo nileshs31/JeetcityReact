@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import logo from "../Images/logo.png";
 import Ausbg from "../Images/Ausbg.png";
 import aushome from "../Images/aushome.png";
@@ -11,6 +12,256 @@ import close from "../Images/close.png";
 
 const Australianopen = () => {
   const [modal, setModal] = useState(false);
+  const [selected, setSelected] = useState("btn");
+  const [selected2, setSelected2] = useState("btn");
+  const [selected3, setSelected3] = useState("btn");
+  const [selected4, setSelected4] = useState("btn");
+  const [selected5, setSelected5] = useState("btn");
+  const [selected6, setSelected6] = useState("btn");
+  const [selected7, setSelected7] = useState("btn");
+  const [finalselected, setFinalSelected] = useState("btn");
+  const [finalName, setFinalName] = useState("");
+
+  function changeColorFinal(btn) {
+    setFinalSelected(btn);
+    const one = document.getElementById("final1").textContent;
+    const two = document.getElementById("final2").textContent;
+
+    if (finalselected === "finalbtn1") {
+      setFinalName(two);
+    } else {
+      setFinalName(one);
+    }
+  }
+
+  const [name, setName] = useState("");
+  const [name2, setName2] = useState("");
+  const [name3, setName3] = useState("");
+  const [name4, setName4] = useState("");
+
+  const [name5, setName5] = useState("");
+  const [name6, setName6] = useState("");
+  const [name7, setName7] = useState("");
+
+  console.table("namemmemem", name5);
+  useEffect(() => {
+    const body = document.querySelector("body");
+    body.style.overflow = modal ? "hidden" : "auto";
+  }, [modal]);
+
+  function changeColor(btn) {
+    setSelected(btn);
+
+    if (selected === "btn1") {
+      setName("Rondalo");
+    } else {
+      setName("Messi");
+    }
+  }
+
+  //
+  function changeColor2(btn) {
+    setSelected2(btn);
+
+    if (selected2 === "btn3") {
+      setName2("Maradona");
+    } else {
+      setName2("neymar");
+    }
+  }
+
+  ////////////
+  function changeColor3(btn) {
+    setSelected3(btn);
+
+    if (selected3 === "btn5") {
+      setName3("mbappe");
+    } else {
+      setName3("pele");
+    }
+  }
+
+  ////////////////////////////////
+  function changeColor4(btn) {
+    setSelected4(btn);
+
+    if (selected4 === "btn7") {
+      setName4("Suarez");
+    } else {
+      setName4("Lewandoski");
+    }
+  }
+
+  // console.log('selelle',selected5)
+  //////////////////////
+
+  function changeColor5(btn) {
+    setSelected5(btn);
+    const inn2 = document.getElementById("test2").textContent;
+    const inn = document.getElementById("test").textContent;
+
+    if (selected5 === "btn9") {
+      setName5(inn2);
+    } else {
+      setName5(inn);
+    }
+
+    // selected5==='btn10'?setName5(inn):setName6(inn2)
+  }
+
+  /////////////////////////////
+  function changeColor6(btn) {
+    setSelected6(btn);
+    const top1 = document.getElementById("test3").textContent;
+    const top2 = document.getElementById("test4").textContent;
+
+    if (selected6 === "btn11") {
+      setName6(top2);
+    } else {
+      setName6(top1);
+    }
+  }
+
+  /////////////////////////////
+  function changeColor7(btn) {
+    setSelected7(btn);
+    const fintext = document.getElementById("test5").textContent;
+    const fintext2 = document.getElementById("test6").textContent;
+
+    if (selected7 === "btn13") {
+      setName7(fintext2);
+    } else {
+      setName7(fintext);
+    }
+  }
+
+  ///////////////////////////////////////
+  const [selected8, setSelected8] = useState("btn");
+  const [selected9, setSelected9] = useState("btn");
+  const [selected10, setSelected10] = useState("btn");
+  const [selected11, setSelected11] = useState("btn");
+  const [selected12, setSelected12] = useState("btn");
+  const [selected13, setSelected13] = useState("btn");
+  const [selected14, setSelected14] = useState("btn");
+  const [selected15, setSelected15] = useState("btn");
+
+  // const[name8,setName8] = useState('')
+  const [name9, setName9] = useState("");
+  const [name10, setName10] = useState("");
+  const [name11, setName11] = useState("");
+  const [name12, setName12] = useState("");
+  const [name13, setName13] = useState("");
+  const [name14, setName14] = useState("");
+  const [name15, setName15] = useState("");
+
+  /////
+  // function changeColor8(btn){
+  // setSelected8(btn)
+
+  // if(selected8==='btn8'){
+  //   setName8('player eight')
+  // }else{
+  //   setName8('player seven')
+  // }
+
+  // }
+
+  function changeColor9(btn) {
+    setSelected9(btn);
+
+    if (selected9 === "btn17") {
+      setName9("Cruyff");
+    } else {
+      setName9("Zidane");
+    }
+  }
+
+  function changeColor10(btn) {
+    setSelected10(btn);
+
+    if (selected10 === "btn19") {
+      setName10("Ferenc Puskas");
+    } else {
+      setName10("Franz Beckenbauer");
+    }
+  }
+
+  function changeColor11(btn) {
+    setSelected11(btn);
+
+    if (selected11 === "btn21") {
+      setName11("Mohamed Salah");
+    } else {
+      setName11("Erling Haaland");
+    }
+  }
+
+  function changeColor12(btn) {
+    setSelected12(btn);
+
+    if (selected12 === "btn15") {
+      setName12("xavi");
+    } else {
+      setName12("di stefano");
+    }
+  }
+
+  function changeColor13(btn) {
+    setSelected13(btn);
+    const n3 = document.getElementById("no3").textContent;
+    const n4 = document.getElementById("no4").textContent;
+
+    if (selected13 === "btn23") {
+      setName13(n4);
+    } else {
+      setName13(n3);
+    }
+  }
+
+  function changeColor14(btn) {
+    setSelected14(btn);
+
+    const n1 = document.getElementById("no1").textContent;
+    const n2 = document.getElementById("no2").textContent;
+
+    if (selected14 === "btn25") {
+      setName14(n2);
+    } else {
+      setName14(n1);
+    }
+  }
+
+  function changeColor15(btn) {
+    setSelected15(btn);
+    const ff1 = document.getElementById("f1").textContent;
+    const ff2 = document.getElementById("f2").textContent;
+
+    if (selected15 === "btn27") {
+      setName15(ff2);
+    } else {
+      setName15(ff1);
+    }
+  }
+
+  const handleSubmit = (e) => {
+    //  e.preventDefault();
+    const data = {
+      name: name,
+      email: "player01@gmail.com",
+    };
+
+    axios
+      .post(
+        "https://sheet.best/api/sheets/4735a059-0853-43bd-a7af-19cbe03a4eac",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+      });
+  };
+
+  ///////////////////
+
   return (
     <div className="text-white ">
       {/* <p>check </p> */}
@@ -119,7 +370,7 @@ const Australianopen = () => {
 
       <div className="  flex flex-col items-center w-full h-[1620px] mt-12">
         <div className="w-[2px]   border-2  h-[1600px] flex flex-col items-center gap-[250px]  z-20">
-          <button className="px-20 mt-[5px]  p-[10px] bg-white text-black rounded-lg">
+          <button className={`px-20   p-[10px] bg-white text-black rounded-lg`}>
             Player
           </button>
           <button className="px-20 -mt-[20px]  p-[10px] bg-white text-black rounded-lg">
@@ -144,40 +395,112 @@ const Australianopen = () => {
             <div className="border-2 border-white p-3 lg:p-8 grid sm:grid-cols-2 gap-8  rounded-[32px] mb-5">
               <div className="grid grid-cols-2 gap-4 ">
                 <div className="w-full border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
-                  <button className="px-4 p-3  bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor("btn1");
+                    }}
+                    className={
+                      selected === "btn1"
+                        ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Messi
                   </button>
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor("btn2");
+                    }}
+                    className={
+                      selected === "btn2"
+                        ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Ronaldo
                   </button>
                 </div>
 
                 <div className=" border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
-                  <button className="px-4 p-3  bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor2("btn3");
+                    }}
+                    className={
+                      selected2 === "btn3"
+                        ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Neymar
                   </button>
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor2("btn4");
+                    }}
+                    className={
+                      selected2 === "btn4"
+                        ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Maradona
                   </button>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4 w-full">
                 <div className=" border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
-                  <button className="px-4 p-3  bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor3("btn5");
+                    }}
+                    className={
+                      selected3 === "btn5"
+                        ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Pele
                   </button>
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor3("btn6");
+                    }}
+                    className={
+                      selected3 === "btn6"
+                        ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Mbappe
                   </button>
                 </div>
 
                 <div className=" border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
-                  <button className="px-4 p-3  bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor4("btn7");
+                    }}
+                    className={
+                      selected4 === "btn7"
+                        ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Lewandoski
                   </button>
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor4("btn8");
+                    }}
+                    className={
+                      selected4 === "btn8"
+                        ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Suarez
                   </button>
                 </div>
               </div>
@@ -185,112 +508,325 @@ const Australianopen = () => {
 
             <div className="border-2 my-10 grid grid-cols-2 gap-8 p-3 w-full lg:p-8 rounded-[32px]">
               <div className="grid md:grid-cols-2 gap-5 p-3 border-2 lg:p-[16px] rounded-[16px]">
-                <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                  Player Name
+                <button
+                  id="test"
+                  onClick={() => {
+                    changeColor5("btn9");
+                  }}
+                  className={
+                    selected5 === "btn9"
+                      ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                      : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                  }
+                >
+                  {name ? name : "player"}
                 </button>
-                <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                  Player Name
+                <button
+                  id="test2"
+                  onClick={() => {
+                    changeColor5("btn10");
+                  }}
+                  className={
+                    selected5 === "btn10"
+                      ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                      : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                  }
+                >
+                  {name2 ? name2 : "player"}
                 </button>
               </div>
 
               <div className="grid md:grid-cols-2 gap-5 p-3 lg:p-[16px] rounded-[16px] border-2">
-                <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                  Player Name
+                <button
+                  id="test3"
+                  onClick={() => {
+                    changeColor6("btn11");
+                  }}
+                  className={
+                    selected6 === "btn11"
+                      ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                      : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                  }
+                >
+                  {name3 ? name3 : "playe 22"}
                 </button>
-                <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                  Player Name
+                <button
+                  id="test4"
+                  onClick={() => {
+                    changeColor6("btn12");
+                  }}
+                  className={
+                    selected6 === "btn12"
+                      ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                      : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                  }
+                >
+                  {name4 ? name4 : "player 22"}
                 </button>
               </div>
             </div>
 
             <div className="grid grid-cols-2  gap-5 border-2 p-8 my-5  w-full lg:max-w-[50%] mx-auto rounded-[32px]">
-              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                Player Name
+              <button
+                id="test5"
+                onClick={() => {
+                  changeColor7("btn13");
+                }}
+                className={
+                  selected7 === "btn13"
+                    ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                    : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                }
+              >
+                {name5 ? name5 : "playy"}
               </button>
-              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                Player Name
+              <button
+                id="test6"
+                onClick={() => {
+                  changeColor7("btn14");
+                }}
+                className={
+                  selected7 === "btn14"
+                    ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                    : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                }
+              >
+                {name6 ? name6 : "pppp"}
               </button>
             </div>
 
             <div className=" flex flex-col mt-16  gap-5 w-[300px] mx-auto  border-2 p-4 rounded-[16px]  z-20">
-              <button className="px-4 p-3 bg-[#42475E] rounded-lg z-20">
-                Player Name
+              <button
+                id="final1"
+                onClick={() => {
+                  changeColorFinal("finalbtn1");
+                }}
+                className={
+                  finalselected === "finalbtn1"
+                    ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                    : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                }
+              >
+                {name7 ? name7 : "Final"}
               </button>
               <button className="px-4 p-3 bg-white text-black rounded-lg z-20">
-                Player Name
+                {finalName ? finalName : "name"}
               </button>
-              <button className="px-4 p-3 bg-[#42475E] rounded-lg z-20">
-                Player Name
+              <button
+                id="final2"
+                onClick={() => {
+                  changeColorFinal("finalbtn2");
+                }}
+                className={
+                  finalselected === "finalbtn2"
+                    ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                    : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                }
+              >
+                {name15 ? name15 : "finalll"}
               </button>
             </div>
           </div>
 
           {/*  */}
-          <div className="bg-[#34A2DB] p-5 lg:p-10 w-full  h-[700px] rounded-b-[32px]">
+          <div className="bg-[#34A2DB] p-5 lg:p-10 w-full  h-auto lg:h-[700px] rounded-b-[32px]">
             <div className="  grid grid-cols-2  gap-5 border-2 p-3 lg:p-8 my-5  w-full lg:max-w-[50%] mx-auto rounded-[32px]">
-              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                Player Name
+              <button
+                id="f1"
+                onClick={() => {
+                  changeColor15("btn27");
+                }}
+                className={
+                  selected15 === "btn27"
+                    ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                    : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                }
+              >
+                {name14 ? name14 : "hello"}
               </button>
-              <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                Player Name
+              <button
+                id="f2"
+                onClick={() => {
+                  changeColor15("btn28");
+                }}
+                className={
+                  selected15 === "btn28"
+                    ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                    : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                }
+              >
+                {name13 ? name13 : "hello world"}
               </button>
             </div>
 
             <div className="border-2 my-10 grid grid-cols-2 gap-8 w-full p-8 rounded-[32px]">
               <div className="grid md:grid-cols-2 gap-5 border-2 p-[16px] rounded-[16px]">
-                <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                  Player Name
+                <button
+                  id="no1"
+                  onClick={() => {
+                    changeColor14("btn25");
+                  }}
+                  className={
+                    selected14 === "btn25"
+                      ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                      : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                  }
+                >
+                  {name12 ? name12 : "player name"}
                 </button>
-                <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                  Player Name
+                <button
+                  id="no2"
+                  onClick={() => {
+                    changeColor14("btn26");
+                  }}
+                  className={
+                    selected14 === "btn26"
+                      ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                      : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                  }
+                >
+                  {name9 ? name9 : "player name"}
                 </button>
               </div>
 
               <div className="grid md:grid-cols-2 gap-5 border- p-[16px] rounded-[16px] border-2">
-                <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                  Player Name
+                <button
+                  id="no3"
+                  onClick={() => {
+                    changeColor13("btn23");
+                  }}
+                  className={
+                    selected13 === "btn23"
+                      ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                      : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                  }
+                >
+                  {name10 ? name10 : "player name"}
                 </button>
-                <button className="px-4 p-3 bg-[#42475E] rounded-lg">
-                  Player Name
+                <button
+                  id="no4"
+                  onClick={() => {
+                    changeColor13("btn24");
+                  }}
+                  className={
+                    selected13 === "btn24"
+                      ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                      : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                  }
+                >
+                  {name11 ? name11 : "player name"}
                 </button>
               </div>
             </div>
             <div className="border-2  border-white p-3 lg:p-8 grid sm:grid-cols-2 gap-8 rounded-[32px] mb-5">
               <div className="grid grid-cols-2 gap-4 ">
                 <div className=" border-2 flex flex-col  items-center justify-center  p-2 lg:p-[16px] gap-[16px] rounded-[16px]">
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor12("btn15");
+                    }}
+                    className={
+                      selected12 === "btn15"
+                        ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    di stefano
                   </button>
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor12("btn16");
+                    }}
+                    className={
+                      selected12 === "btn16"
+                        ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Xavi
                   </button>
                 </div>
 
-                <div className="border-2 flex flex-col  items-center justify-center p-2 lg:p-[16px] gap-[16px] rounded-[16px] ">
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                <div className=" border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
+                  <button
+                    onClick={() => {
+                      changeColor9("btn17");
+                    }}
+                    className={
+                      selected9 === "btn17"
+                        ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Zinedine Zidane
                   </button>
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor9("btn18");
+                    }}
+                    className={
+                      selected9 === "btn18"
+                        ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Johan Cruyff
                   </button>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4 ">
                 <div className="border-2  flex flex-col p-2 lg:p-[16px] gap-[16px] items-center justify-center rounded-[16px]">
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor10("btn19");
+                    }}
+                    className={
+                      selected10 === "btn19"
+                        ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Franz Beckenbauer
                   </button>
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor10("btn20");
+                    }}
+                    className={
+                      selected10 === "btn20"
+                        ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Ferenc Puskas
                   </button>
                 </div>
-                <div className="border-2 flex flex-col p-2  items-center justify-center lg:p-[16px] gap-[16px] rounded-[16px]">
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+
+                <div className=" border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
+                  <button
+                    onClick={() => {
+                      changeColor11("btn21");
+                    }}
+                    className={
+                      selected11 === "btn21"
+                        ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Erling Haaland
                   </button>
-                  <button className="px-4 p-3 bg-[#42475E] rounded-lg w-full">
-                    Player Name
+                  <button
+                    onClick={() => {
+                      changeColor11("btn22");
+                    }}
+                    className={
+                      selected11 === "btn22"
+                        ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                        : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
+                    }
+                  >
+                    Mohamed Salah
                   </button>
                 </div>
               </div>
@@ -299,7 +835,8 @@ const Australianopen = () => {
         </div>
       </div>
 
-      <div className="relative">
+      {/*  */}
+      <div className="  mt-24 md:mt-0">
         <div className="flex items-center justify-center ">
           <button
             className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-xl"
@@ -311,17 +848,25 @@ const Australianopen = () => {
           </button>
         </div>
 
-        <div className=" max-w-[90%] mx-auto my-5 bg-[#272B3B] flex items-center justify-between p-4">
+        <div className=" border-2 max-w-[90%] mx-auto my-5 bg-[#272B3B] flex items-center justify-between p-4">
           <div className="flex items-center gap-4">
             <img src={i} />
             <p>Terms & Conditions</p>
           </div>
           <img src={down} />
         </div>
+        <button
+          className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-xl"
+          onClick={() => {
+            handleSubmit();
+          }}
+        >
+          send
+        </button>
 
         {/* pop Up */}
         {modal ? (
-          <div className="absolute top-0 h-screen bg-[#272B3B] p-4">
+          <div className="absolute bottom-0 z-20  h-screen overflow-y-hidden w-full bg-[#272B3B] p-4">
             <img
               src={close}
               onClick={() => {
