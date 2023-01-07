@@ -11,27 +11,33 @@ import popUp from "../Images/popUp.png";
 import close from "../Images/close.png";
 
 const Australianopen = () => {
+  const [email,setemail] =useState('')
   const [modal, setModal] = useState(false);
-  const [selected, setSelected] = useState("btn");
-  const [selected2, setSelected2] = useState("btn");
-  const [selected3, setSelected3] = useState("btn");
-  const [selected4, setSelected4] = useState("btn");
-  const [selected5, setSelected5] = useState("btn");
-  const [selected6, setSelected6] = useState("btn");
-  const [selected7, setSelected7] = useState("btn");
+  const [selected, setSelected] = useState(null);
+  const [selected2, setSelected2] = useState(null);
+  const [selected3, setSelected3] = useState(null);
+  const [selected4, setSelected4] = useState(null);
+  const [selected5, setSelected5] = useState(null);
+  const [selected6, setSelected6] = useState(null);
+  const [selected7, setSelected7] = useState(null);
   const [finalselected, setFinalSelected] = useState("btn");
   const [finalName, setFinalName] = useState("");
 
   function changeColorFinal(btn) {
-    setFinalSelected(btn);
+  
     const one = document.getElementById("final1").textContent;
     const two = document.getElementById("final2").textContent;
 
-    if (finalselected === "finalbtn1") {
-      setFinalName(two);
+   if (finalselected === btn) {
+      setFinalSelected(null);
+      setFinalName(null);
     } else {
-      setFinalName(one);
+      setFinalSelected(btn);
+      setFinalName(btn === 'finalbtn1' ? one  : two);
     }
+
+
+  
   }
 
   const [name, setName] = useState("");
@@ -43,6 +49,8 @@ const Australianopen = () => {
   const [name6, setName6] = useState("");
   const [name7, setName7] = useState("");
 
+  const [toggle,settoggle] = useState(false)
+
   console.table("namemmemem", name5);
   useEffect(() => {
     const body = document.querySelector("body");
@@ -50,45 +58,52 @@ const Australianopen = () => {
   }, [modal]);
 
   function changeColor(btn) {
-    setSelected(btn);
 
-    if (selected === "btn1") {
-      setName("Rondalo");
+   if (selected === btn) {
+      setSelected(null);
+      setName(null);
     } else {
-      setName("Messi");
+      setSelected(btn);
+      setName(btn === 'btn1' ? 'Messi' : 'Ronaldo');
     }
+
+
+    
   }
 
   //
   function changeColor2(btn) {
-    setSelected2(btn);
-
-    if (selected2 === "btn3") {
-      setName2("Maradona");
+   
+   if (selected2 === btn) {
+      setSelected2(null);
+      setName2(null);
     } else {
-      setName2("neymar");
+      setSelected2(btn);
+      setName2(btn === 'btn3' ? 'Neymar' : 'Maradona');
     }
   }
 
   ////////////
   function changeColor3(btn) {
-    setSelected3(btn);
-
-    if (selected3 === "btn5") {
-      setName3("mbappe");
+   
+   if (selected3 === btn) {
+      setSelected3(null);
+      setName3(null);
     } else {
-      setName3("pele");
+      setSelected3(btn);
+      setName3(btn === 'btn5' ? 'pele' : 'Mbappe');
     }
   }
 
   ////////////////////////////////
   function changeColor4(btn) {
-    setSelected4(btn);
-
-    if (selected4 === "btn7") {
-      setName4("Suarez");
+    
+   if (selected4 === btn) {
+      setSelected4(null);
+      setName4(null);
     } else {
-      setName4("Lewandoski");
+      setSelected4(btn);
+      setName4(btn === 'btn7' ? 'Lewandoski' : 'Suarez');
     }
   }
 
@@ -100,10 +115,13 @@ const Australianopen = () => {
     const inn2 = document.getElementById("test2").textContent;
     const inn = document.getElementById("test").textContent;
 
-    if (selected5 === "btn9") {
-      setName5(inn2);
+   
+   if (selected5 === btn) {
+      setSelected5(null);
+      setName5(null);
     } else {
-      setName5(inn);
+      setSelected5(btn);
+      setName5(btn === 'btn9' ? inn : inn2);
     }
 
     // selected5==='btn10'?setName5(inn):setName6(inn2)
@@ -115,10 +133,12 @@ const Australianopen = () => {
     const top1 = document.getElementById("test3").textContent;
     const top2 = document.getElementById("test4").textContent;
 
-    if (selected6 === "btn11") {
-      setName6(top2);
+   if (selected6 === btn) {
+      setSelected6(null);
+      setName6(null);
     } else {
-      setName6(top1);
+      setSelected6(btn);
+      setName6(btn === 'btn11' ? top1 : top2);
     }
   }
 
@@ -128,10 +148,12 @@ const Australianopen = () => {
     const fintext = document.getElementById("test5").textContent;
     const fintext2 = document.getElementById("test6").textContent;
 
-    if (selected7 === "btn13") {
-      setName7(fintext2);
+   if (selected7 === btn) {
+      setSelected7(null);
+      setName7(null);
     } else {
-      setName7(fintext);
+      setSelected7(btn);
+      setName7(btn === 'btn13' ? fintext : fintext2);
     }
   }
 
@@ -154,55 +176,51 @@ const Australianopen = () => {
   const [name14, setName14] = useState("");
   const [name15, setName15] = useState("");
 
-  /////
-  // function changeColor8(btn){
-  // setSelected8(btn)
 
-  // if(selected8==='btn8'){
-  //   setName8('player eight')
-  // }else{
-  //   setName8('player seven')
-  // }
-
-  // }
 
   function changeColor9(btn) {
-    setSelected9(btn);
-
-    if (selected9 === "btn17") {
-      setName9("Cruyff");
+     if (selected9 === btn) {
+      setSelected9(null);
+      setName9(null);
     } else {
-      setName9("Zidane");
+      setSelected9(btn);
+      setName9(btn === 'btn17' ? 'Zinedine Zidane' : 'Johan Cruyff');
     }
   }
 
   function changeColor10(btn) {
-    setSelected10(btn);
 
-    if (selected10 === "btn19") {
-      setName10("Ferenc Puskas");
+       if (selected10 === btn) {
+      setSelected10(null);
+      setName10(null);
     } else {
-      setName10("Franz Beckenbauer");
+      setSelected10(btn);
+      setName10(btn === 'btn19' ? 'Franz Beckenbauer' : 'Ferenc Puskas');
     }
+  
   }
 
   function changeColor11(btn) {
-    setSelected11(btn);
-
-    if (selected11 === "btn21") {
-      setName11("Mohamed Salah");
+   if (selected11 === btn) {
+      setSelected11(null);
+      setName11(null);
     } else {
-      setName11("Erling Haaland");
+      setSelected11(btn);
+      setName11(btn === 'btn21' ? 'Erling Haaland' : 'Mohamed Salah');
     }
+
+  
   }
 
-  function changeColor12(btn) {
-    setSelected12(btn);
 
-    if (selected12 === "btn15") {
-      setName12("xavi");
+  function changeColor12(btn) {
+  
+       if (selected12 === btn) {
+      setSelected12(null);
+      setName12(null);
     } else {
-      setName12("di stefano");
+      setSelected12(btn);
+      setName12(btn === 'btn15' ? 'di stefano' : 'Xavi');
     }
   }
 
@@ -211,24 +229,31 @@ const Australianopen = () => {
     const n3 = document.getElementById("no3").textContent;
     const n4 = document.getElementById("no4").textContent;
 
-    if (selected13 === "btn23") {
-      setName13(n4);
+    if (selected13 === btn) {
+      setSelected13(null);
+      setName13(null);
     } else {
-      setName13(n3);
+      setSelected13(btn);
+      setName13(btn === 'btn23' ? n3  : n4);
     }
+
+    
   }
 
   function changeColor14(btn) {
-    setSelected14(btn);
+   
 
     const n1 = document.getElementById("no1").textContent;
     const n2 = document.getElementById("no2").textContent;
 
-    if (selected14 === "btn25") {
-      setName14(n2);
+      if (selected14 === btn) {
+      setSelected14(null);
+      setName14(null);
     } else {
-      setName14(n1);
+      setSelected14(btn);
+      setName14(btn === 'btn25' ? n1  : n2);
     }
+   
   }
 
   function changeColor15(btn) {
@@ -236,18 +261,20 @@ const Australianopen = () => {
     const ff1 = document.getElementById("f1").textContent;
     const ff2 = document.getElementById("f2").textContent;
 
-    if (selected15 === "btn27") {
-      setName15(ff2);
+    if (selected15 === btn) {
+      setSelected15(null);
+      setName15(null);
     } else {
-      setName15(ff1);
+      setSelected15(btn);
+      setName15(btn === 'btn27' ? ff1  : ff2);
     }
   }
 
   const handleSubmit = (e) => {
     //  e.preventDefault();
     const data = {
-      name: name,
-      email: "player01@gmail.com",
+      name:finalName,
+      email:email,
     };
 
     axios
@@ -257,7 +284,12 @@ const Australianopen = () => {
       )
       .then((response) => {
         console.log(response);
+          setemail('')
+        setFinalName('')
+     
       });
+        // window.location.reload();
+      
   };
 
   ///////////////////
@@ -368,9 +400,10 @@ const Australianopen = () => {
       {/* predictions section  */}
       <p className="text-center m-4 text-3xl">Your predictions</p>
 
-      <div className="  flex flex-col items-center w-full h-[1620px] mt-12">
-        <div className="w-[2px]   border-2  h-[1600px] flex flex-col items-center gap-[250px]  z-20">
-          <button className={`px-20   p-[10px] bg-white text-black rounded-lg`}>
+      <div className="  flex flex-col items-center w-full h-[1600px] ">
+
+        <div className="w-[2px]   border-2 h-auto lg:h-[1600px] flex flex-col items-center  gap-[250px] z-20">
+          <button className={`lg:px-20 px-10  p-[10px] bg-white text-black rounded-lg`}>
             Player
           </button>
           <button className="px-20 -mt-[20px]  p-[10px] bg-white text-black rounded-lg">
@@ -390,7 +423,7 @@ const Australianopen = () => {
           </button>
         </div>
 
-        <div className=" -mt-[1600px] w-[100%] md:w-[95%] lg:w-[90%] mx-auto ">
+        <div className=" -mt-[1600px] w-[100%]  md:w-[95%] lg:w-[90%] mx-auto ">
           <div className="bg-[#34A2DB] p-3 lg:p-10 w-full h-auto md:h-[900px] rounded-t-[32px]">
             <div className="border-2 border-white p-3 lg:p-8 grid sm:grid-cols-2 gap-8  rounded-[32px] mb-5">
               <div className="grid grid-cols-2 gap-4 ">
@@ -400,7 +433,7 @@ const Australianopen = () => {
                       changeColor("btn1");
                     }}
                     className={
-                      selected === "btn1"
+                      selected === "btn1" 
                         ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
                         : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                     }
@@ -413,6 +446,7 @@ const Australianopen = () => {
                     }}
                     className={
                       selected === "btn2"
+                     
                         ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
                         : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                     }
@@ -519,7 +553,7 @@ const Australianopen = () => {
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
                 >
-                  {name ? name : "player"}
+                  {name ? name : "player name"}
                 </button>
                 <button
                   id="test2"
@@ -532,7 +566,7 @@ const Australianopen = () => {
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
                 >
-                  {name2 ? name2 : "player"}
+                  {name2 ? name2 : "player name"}
                 </button>
               </div>
 
@@ -548,7 +582,7 @@ const Australianopen = () => {
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
                 >
-                  {name3 ? name3 : "playe 22"}
+                  {name3 ? name3 : "playe name"}
                 </button>
                 <button
                   id="test4"
@@ -561,7 +595,7 @@ const Australianopen = () => {
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
                 >
-                  {name4 ? name4 : "player 22"}
+                  {name4 ? name4 : "player name"}
                 </button>
               </div>
             </div>
@@ -578,7 +612,7 @@ const Australianopen = () => {
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
               >
-                {name5 ? name5 : "playy"}
+                {name5 ? name5 : "player name"}
               </button>
               <button
                 id="test6"
@@ -591,7 +625,7 @@ const Australianopen = () => {
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
               >
-                {name6 ? name6 : "pppp"}
+                {name6 ? name6 : "player name"}
               </button>
             </div>
 
@@ -607,10 +641,10 @@ const Australianopen = () => {
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
               >
-                {name7 ? name7 : "Final"}
+                {name7 ? name7 : "Finalist"}
               </button>
               <button className="px-4 p-3 bg-white text-black rounded-lg z-20">
-                {finalName ? finalName : "name"}
+                {finalName ? finalName : "Winner"}
               </button>
               <button
                 id="final2"
@@ -623,7 +657,7 @@ const Australianopen = () => {
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
               >
-                {name15 ? name15 : "finalll"}
+                {name15 ? name15 : "finalist"}
               </button>
             </div>
           </div>
@@ -642,7 +676,7 @@ const Australianopen = () => {
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
               >
-                {name14 ? name14 : "hello"}
+                {name14 ? name14 : "player name"}
               </button>
               <button
                 id="f2"
@@ -655,7 +689,7 @@ const Australianopen = () => {
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
               >
-                {name13 ? name13 : "hello world"}
+                {name13 ? name13 : "player name"}
               </button>
             </div>
 
@@ -857,9 +891,7 @@ const Australianopen = () => {
         </div>
         <button
           className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-xl"
-          onClick={() => {
-            handleSubmit();
-          }}
+        
         >
           send
         </button>
@@ -886,14 +918,16 @@ const Australianopen = () => {
                 <input
                   type="email"
                   placeholder="Email..."
+                  value={email}
+                  onChange={(e) =>{setemail(e.target.value)}}
                   className="mt-3 p-2 outline-none bg-[#34384D] border-[1px]"
                 />
               </div>
               <button
                 className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-xl"
-                onClick={() => {
-                  alert("hell0");
-                }}
+                  onClick={() => {
+            handleSubmit();
+          }}
               >
                 Make a bet
               </button>
