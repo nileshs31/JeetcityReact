@@ -284,8 +284,7 @@ const Australianopen = () => {
       )
       .then((response) => {
         console.log(response);
-          setemail('')
-        setFinalName('')
+        
      
       });
         // window.location.reload();
@@ -312,9 +311,9 @@ const Australianopen = () => {
             20% ONLY WIN FREE BET + 20% COMBOBOOST
           </h2>
         </div>
-        <img
+        <img 
           src={aushome}
-          className="w-[184px] h-[185px] sm:h-auto sm:w-auto object-cover"
+          className=" xl:w-[462px] xl:h-[448px] md::w-[395px] md:h-[382px] sm:w-[332px] sm:h-[321px] w-[184px] h-[178px] object-fit"
         />
       </div>
       {/* bet section */}
@@ -342,7 +341,7 @@ const Australianopen = () => {
         {/* prize section */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
-            <img src={coin} alt="coin" />
+            <img src={coin} alt="coin" className="w-[42px] h-[42px]" />
             <p className="text-[22px] eastman">1 FREEBET</p>
             <p className="normal">5 euro</p>
             <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
@@ -352,7 +351,7 @@ const Australianopen = () => {
           </div>
 
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
-            <img src={coin} alt="coin" />
+            <img src={coin} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">2 FREEBET</p>
             <p className="normal">5 euro</p>
             <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
@@ -362,7 +361,7 @@ const Australianopen = () => {
           </div>
 
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
-            <img src={coin} alt="coin" />
+            <img src={coin} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">3 FREEBET</p>
             <p className="normal">5 euro</p>
             <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
@@ -372,7 +371,7 @@ const Australianopen = () => {
           </div>
 
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
-            <img src={coin} alt="coin" />
+            <img src={coin} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">4 FREEBET</p>
             <p className="normal">10 euro</p>
             <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
@@ -382,7 +381,7 @@ const Australianopen = () => {
           </div>
 
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
-            <img src={gift} alt="coin" />
+            <img src={gift} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">GRAND PRIZE</p>
             <p className="normal">iphone 14 max pro</p>
             <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
@@ -889,16 +888,13 @@ const Australianopen = () => {
           </div>
           <img src={down} />
         </div>
-        <button
-          className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-xl"
-        
-        >
-          send
-        </button>
+      </div>
 
-        {/* pop Up */}
+         {/* pop Up */}
         {modal ? (
-          <div className="absolute bottom-0 z-20  h-screen overflow-y-hidden w-full bg-[#272B3B] p-4">
+          <FullScreenModal >
+            <div className="">
+       <div className=" my-5  max-w-[90%] mx-auto bg-[#272B3B] p-4">
             <img
               src={close}
               onClick={() => {
@@ -906,9 +902,9 @@ const Australianopen = () => {
               }}
               className="float-right cursor-pointer"
             />
-            <div className=" p-[40px] flex flex-col items-center gap-5">
+            <div className=" lg:p-[40px] flex flex-col items-center gap-5">
               <img src={popUp} />
-              <p className="text-[24px] w-[70%] mx-auto text-center">
+              <p className="lg:text-[24px] lg:w-[70%] mx-auto text-center">
                 To complete the Prediction, you need to provide email your
                 account and need to bet 5 EUR for any tennis match. Otherwise,
                 the Prediction will not be considered valid.
@@ -933,12 +929,28 @@ const Australianopen = () => {
               </button>
             </div>
           </div>
+            </div>
+   
+          </FullScreenModal>
+
+     
+         
         ) : (
           ""
         )}
-      </div>
     </div>
   );
 };
 
 export default Australianopen;
+
+
+
+
+const FullScreenModal = ({ children }) => {
+  return (
+    <div className="fixed top-0 left-0 right-0 bottom-0 z-50 modal  flex items-center justify-center p-10">
+      {children}
+    </div>
+  );
+};
