@@ -9,8 +9,11 @@ import i from "../Images/i.png";
 import down from "../Images/down.png";
 import popUp from "../Images/popUp.png";
 import close from "../Images/close.png";
+import {IoIosArrowForward ,IoIosArrowDown} from 'react-icons/io'
+import { Link } from "react-router-dom";
 
 const Australianopen = () => {
+   const [isOpen, setIsOpen] = useState(false);
   const [email,setemail] =useState('')
   const [modal, setModal] = useState(false);
   const [selected, setSelected] = useState(null);
@@ -273,8 +276,11 @@ const Australianopen = () => {
   const handleSubmit = (e) => {
     //  e.preventDefault();
     const data = {
+       email:email,
       name:finalName,
-      email:email,
+    
+
+     
     };
 
     axios
@@ -284,6 +290,7 @@ const Australianopen = () => {
       )
       .then((response) => {
         console.log(response);
+        alert('success');
         
      
       });
@@ -291,6 +298,7 @@ const Australianopen = () => {
       
   };
 
+  const marGin = isOpen ? '0px':'25px'
   ///////////////////
 
   return (
@@ -298,9 +306,15 @@ const Australianopen = () => {
       {/* <p>check </p> */}
       <header className="flex justify-between items-center p-3">
         <img src={logo} alt="logo" className="w-[132px] h-[34px]" />
+        <div className="flex gap-5 items-center">
+            <Link to='/'> <p className="  font-medium text-center border-b-2">
+         Home
+        </p></Link> 
         <button className="bg-[#48b415] p-2 px-4 rounded-3xl font-medium text-center">
           Sign Up
         </button>
+        </div>
+      
       </header>
 
       {/* home section  */}
@@ -399,33 +413,33 @@ const Australianopen = () => {
       {/* predictions section  */}
       <p className="text-center m-4 text-3xl">Your predictions</p>
 
-      <div className="  flex flex-col items-center w-full h-[1600px] ">
+      <div className="  flex flex-col items-center w-full sm:h-[1600px]  h-[2000px] px-2">
 
-        <div className="w-[2px]   border-2 h-auto lg:h-[1600px] flex flex-col items-center  gap-[250px] z-20">
-          <button className={`lg:px-20 px-10  p-[10px] bg-white text-black rounded-lg`}>
-            Player
+        <div className="w-[2px]   border-2 lg:h-[1599px] sm:h-[1600px] h-[2000px]   flex flex-col items-center  gap-[250px] z-20">
+          <button className={`w-[200px] px-10 p-[10px] bg-white text-black rounded-lg  lg:mt-[13px]`}>
+           1/8 finals
           </button>
-          <button className="px-20 -mt-[20px]  p-[10px] bg-white text-black rounded-lg">
-            Player
+          <button className="w-[200px] px-10 mt-[170px]   sm:-mt-[1px]  md:-mt-[55px]    lg:-mt-[10px]  p-[10px] bg-white text-black rounded-lg">
+          1/4 finals
           </button>
-          <button className="px-20 -mt-[100px] bg-white text-black p-[10px]  rounded-lg">
-            Player
+          <button className="w-[200px] -mt-[9px]  sm:-mt-[70px] px-10 md:-mt-[90px] lg:-mt-[82px] bg-white text-black p-[10px]  rounded-lg">
+          Semi-final
           </button>
-          <button className="px-20  mt-[290px] p-[10px] bg-white text-black rounded-lg">
-            Player
+          <button className="w-[200px] mt-[120px]  sm:mt-[220px]  px-10  md:mt-[300px]   lg:mt-[240px] p-[10px] bg-white text-black rounded-lg">
+          Semi-final
           </button>
-          <button className="px-20 -mt-[105px]  p-[10px] bg-white text-black  rounded-lg">
-            Player
+          <button className="w-[200px] mt-[140px] px-10 sm:-mt-[15px] md:-mt-[30px]  lg:-mt-[80px]  p-[10px] bg-white text-black  rounded-lg">
+           1/4 finals
           </button>
-          <button className="px-20 p-[10px]   -mt-[40px] bg-white text-black  rounded-lg">
-            Player
+          <button className=" w-[200px] px-10 p-[10px] mt-[60px] sm:-mt-[73px]   md:-mt-[60px]  lg:-mt-[39px] bg-white text-black  rounded-lg">
+           1/8 final
           </button>
         </div>
 
-        <div className=" -mt-[1600px] w-[100%]  md:w-[95%] lg:w-[90%] mx-auto ">
-          <div className="bg-[#34A2DB] p-3 lg:p-10 w-full h-auto md:h-[900px] rounded-t-[32px]">
-            <div className="border-2 border-white p-3 lg:p-8 grid sm:grid-cols-2 gap-8  rounded-[32px] mb-5">
-              <div className="grid grid-cols-2 gap-4 ">
+        <div className=" border-2 rounded-2xl md:rounded-3xl lg:-mt-[1600px] sm:-mt-[1600px] -mt-[2000px] w-[100%] h-full md:w-[95%] lg:w-[90%] mx-auto bg-[#34A2DB] flex flex-col items-center justify-between md:p-5 py-8 md:py-10 " >
+          {/* <div className="bg-[#34A2DB] p-3 lg:p-10 w-full h-auto md:h-[900px] rounded-t-[32px]"> */}
+            <div className="border-2 border-white p-3 lg:p-8 grid sm:grid-cols-2 sm:gap-8  rounded-[32px] mb-5 w-full">
+              <div className="grid grid-cols-2 gap-4 w-full md:py-0 py-8">
                 <div className="w-full border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
                   <button
                     onClick={() => {
@@ -482,8 +496,8 @@ const Australianopen = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 w-full">
-                <div className=" border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
+              <div className="grid grid-cols-2 gap-4 w-full md:py-0 py-8">
+                <div className="border-2 flex flex-col items-center justify-center  p-1 lg:p-[16px] gap-[16px] rounded-[16px]">
                   <button
                     onClick={() => {
                       changeColor3("btn5");
@@ -628,7 +642,7 @@ const Australianopen = () => {
               </button>
             </div>
 
-            <div className=" flex flex-col mt-16  gap-5 w-[300px] mx-auto  border-2 p-4 rounded-[16px]  z-20">
+            <div className=" flex flex-col my-5 gap-5 w-[300px] mx-auto  border-2 p-4 rounded-[16px]  z-20">
               <button
                 id="final1"
                 onClick={() => {
@@ -658,12 +672,12 @@ const Australianopen = () => {
               >
                 {name15 ? name15 : "finalist"}
               </button>
-            </div>
+            {/* </div> */}
           </div>
 
           {/*  */}
-          <div className="bg-[#34A2DB] p-5 lg:p-10 w-full  h-auto lg:h-[700px] rounded-b-[32px]">
-            <div className="  grid grid-cols-2  gap-5 border-2 p-3 lg:p-8 my-5  w-full lg:max-w-[50%] mx-auto rounded-[32px]">
+          {/* <div className="bg-[#34A2DB] p-5 lg:p-10 w-full  h-auto lg:h-[700px] rounded-b-[32px]"> */}
+            <div className=" grid grid-cols-2  gap-5 border-2 p-6 md:p-9 lg:p-8 my-5  w-full lg:max-w-[50%] mx-auto md:rounded-[32px]">
               <button
                 id="f1"
                 onClick={() => {
@@ -751,8 +765,8 @@ const Australianopen = () => {
                 </button>
               </div>
             </div>
-            <div className="border-2  border-white p-3 lg:p-8 grid sm:grid-cols-2 gap-8 rounded-[32px] mb-5">
-              <div className="grid grid-cols-2 gap-4 ">
+            <div className="border-2 w-full  border-white p-3 lg:p-8 grid sm:grid-cols-2 gap-8 rounded-[32px] mb-5">
+              <div className="grid grid-cols-2 gap-4  ">
                 <div className=" border-2 flex flex-col  items-center justify-center  p-2 lg:p-[16px] gap-[16px] rounded-[16px]">
                   <button
                     onClick={() => {
@@ -791,7 +805,7 @@ const Australianopen = () => {
                         : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                     }
                   >
-                    Zinedine Zidane
+                   Zidane
                   </button>
                   <button
                     onClick={() => {
@@ -803,7 +817,7 @@ const Australianopen = () => {
                         : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                     }
                   >
-                    Johan Cruyff
+                     Cruyff
                   </button>
                 </div>
               </div>
@@ -820,7 +834,7 @@ const Australianopen = () => {
                         : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                     }
                   >
-                    Franz Beckenbauer
+                     Beckenbauer
                   </button>
                   <button
                     onClick={() => {
@@ -832,7 +846,7 @@ const Australianopen = () => {
                         : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                     }
                   >
-                    Ferenc Puskas
+                     Puskas
                   </button>
                 </div>
 
@@ -847,7 +861,7 @@ const Australianopen = () => {
                         : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                     }
                   >
-                    Erling Haaland
+                    Haaland
                   </button>
                   <button
                     onClick={() => {
@@ -859,12 +873,12 @@ const Australianopen = () => {
                         : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                     }
                   >
-                    Mohamed Salah
+                  Salah
                   </button>
                 </div>
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </div>
 
@@ -881,13 +895,31 @@ const Australianopen = () => {
           </button>
         </div>
 
-        <div className=" border-2 max-w-[90%] mx-auto my-5 bg-[#272B3B] flex items-center justify-between p-4">
+        <div className={  ` max-w-[90%] mx-auto my-[${marGin}]  bg-[#272B3B] flex items-center justify-between p-4 transition-all duration-300`}>
           <div className="flex items-center gap-4">
             <img src={i} />
             <p>Terms & Conditions</p>
           </div>
-          <img src={down} />
+          <div onClick={()=>{setIsOpen(!isOpen)}} className='text-2xl font-medium cursor-pointer'>{isOpen ?<IoIosArrowDown/>:<IoIosArrowForward />}</div>
+
         </div>
+        {isOpen ? <div className="max-w-[90%] mx-auto h-auto bg-[#272B3B] transition-all mb-5 p-5 text-lg ">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+nihil, eveniet aliquid culpa officia aut!</p>
+        </div>:''}
+       
+       
+
+
+
+
+
+
+
       </div>
 
          {/* pop Up */}
@@ -938,6 +970,15 @@ const Australianopen = () => {
         ) : (
           ""
         )}
+
+ 
+
+
+
+
+
+
+
     </div>
   );
 };

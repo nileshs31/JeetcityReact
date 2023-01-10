@@ -29,6 +29,7 @@ import three from "../Images/three.png";
 import jeetlogo from "../Images/jeetlogo.png";
 import himg from "../Images/himg.png";
 import homeBg from "../Images/homeBg.png";
+import { Link } from "react-router-dom";
 
 
 
@@ -37,8 +38,11 @@ const Home = () => {
   return (
     <div className=" text-white ">
       {/* Header section */}
-      <header className="p-4 flex lg:justify-start justify-center 2xl:ml-32 2xl:mt-5">
+      <header className="p-4 px-8 flex justify-between  2xl:ml-32 2xl:mt-5">
         <img src={logo} alt="logo" className="w-[134px] h-[35px] object-cover " />
+        <Link to='/Australianopen'> <p className="  font-medium text-center border-b-2">
+          Australianopen
+        </p></Link> 
       </header>
 
       {/*Home section  */}
