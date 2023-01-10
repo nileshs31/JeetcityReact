@@ -69,12 +69,8 @@ const Australianopen = () => {
       setSelected(btn);
       setName(btn === 'btn1' ? 'Messi' : 'Ronaldo');
     }
-
-
-    
   }
-
-  //
+  
   function changeColor2(btn) {
    
    if (selected2 === btn) {
@@ -276,23 +272,22 @@ const Australianopen = () => {
   const handleSubmit = (e) => {
     //  e.preventDefault();
     const data = {
-       email:email,
-       name1:name,
-       name2:name2,
-       name3:name3,
-       n4:name4,
-       n5:name5,
-       n6:name6,
-       n7:name7,
-       n9:name9,
-       n10:name10,
-       n11:name11,
-       n12:name12,
-       n13:name13,
-       n14:name14,
-       n15:name15,
-      final:finalName,
-      // n3:name
+      email:email,
+      n1:name,
+      n2:name2,
+      n3:name3,
+      n4:name4,
+      n5:name5,
+      n6:name6,
+      n7:name7,
+      n9:name9,
+      n10:name10,
+      n11:name11,
+      n12:name12,
+      n13:name13,
+      n14:name14,
+      n15:name15,
+      finalist:finalName,
     
 
      
@@ -300,7 +295,7 @@ const Australianopen = () => {
 
     axios
       .post(
-        "https://sheet.best/api/sheets/4735a059-0853-43bd-a7af-19cbe03a4eac",
+        "https://sheet.best/api/sheets/9d85ac60-871b-476d-afa4-2f75755439e3",
         data
       )
       .then((response) => {
@@ -610,7 +605,7 @@ const Australianopen = () => {
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
                 >
-                  {name3 ? name3 : "playe name"}
+                  {name3 ? name3 : "player name"}
                 </button>
                 <button
                   id="test4"
@@ -669,7 +664,7 @@ const Australianopen = () => {
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
               >
-                {name7 ? name7 : "Finalist"}
+                {name7 ? name7 : "player name"}
               </button>
               <button className="px-4 p-3 bg-white text-black rounded-lg z-20">
                 {finalName ? finalName : "Winner"}
@@ -685,7 +680,7 @@ const Australianopen = () => {
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
               >
-                {name15 ? name15 : "finalist"}
+                {name15 ? name15 : "player name"}
               </button>
             {/* </div> */}
           </div>
