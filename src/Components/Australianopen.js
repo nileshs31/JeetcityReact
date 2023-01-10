@@ -277,7 +277,22 @@ const Australianopen = () => {
     //  e.preventDefault();
     const data = {
        email:email,
-      name:finalName,
+       name1:name,
+       name2:name2,
+       name3:name3,
+       n4:name4,
+       n5:name5,
+       n6:name6,
+       n7:name7,
+       n9:name9,
+       n10:name10,
+       n11:name11,
+       n12:name12,
+       n13:name13,
+       n14:name14,
+       n15:name15,
+      final:finalName,
+      // n3:name
     
 
      
@@ -327,7 +342,7 @@ const Australianopen = () => {
         </div>
         <img 
           src={aushome}
-          className=" xl:w-[462px] xl:h-[448px] md::w-[395px] md:h-[382px] sm:w-[332px] sm:h-[321px] w-[184px] h-[178px] object-fit"
+          className=" xl:w-[462px] xl:h-[448px] md:w-[395px] md:h-[382px] sm:w-[332px] sm:h-[321px] w-[184px] h-[178px] "
         />
       </div>
       {/* bet section */}
