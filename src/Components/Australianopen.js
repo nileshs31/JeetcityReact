@@ -456,7 +456,7 @@ const Australianopen = () => {
                       changeColor("btn1");
                     }}
                     className={
-                      selected === "btn1" 
+                      selected === "btn1"  
                         ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
                         : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                     }
@@ -571,10 +571,11 @@ const Australianopen = () => {
                     changeColor5("btn9");
                   }}
                   className={
-                    selected5 === "btn9"
+                    selected5 === "btn9" 
                       ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
+                  disabled={!name}
                 >
                   {name ? name : "player name"}
                 </button>
@@ -588,6 +589,8 @@ const Australianopen = () => {
                       ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
+                  disabled={!name2}
+
                 >
                   {name2 ? name2 : "player name"}
                 </button>
@@ -604,6 +607,8 @@ const Australianopen = () => {
                       ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
+                  disabled={!name3}
+
                 >
                   {name3 ? name3 : "player name"}
                 </button>
@@ -617,6 +622,8 @@ const Australianopen = () => {
                       ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
+                  disabled={!name4}
+
                 >
                   {name4 ? name4 : "player name"}
                 </button>
@@ -634,6 +641,8 @@ const Australianopen = () => {
                     ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
+                  disabled={!name5}
+
               >
                 {name5 ? name5 : "player name"}
               </button>
@@ -647,6 +656,8 @@ const Australianopen = () => {
                     ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
+                  disabled={!name6}
+
               >
                 {name6 ? name6 : "player name"}
               </button>
@@ -663,6 +674,8 @@ const Australianopen = () => {
                     ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
+                  disabled={!name7}
+
               >
                 {name7 ? name7 : "player name"}
               </button>
@@ -679,6 +692,8 @@ const Australianopen = () => {
                     ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
+                  disabled={!name15}
+
               >
                 {name15 ? name15 : "player name"}
               </button>
@@ -698,6 +713,8 @@ const Australianopen = () => {
                     ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
+                  disabled={!name14}
+
               >
                 {name14 ? name14 : "player name"}
               </button>
@@ -711,6 +728,8 @@ const Australianopen = () => {
                     ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
                     : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                 }
+                  disabled={!name13}
+
               >
                 {name13 ? name13 : "player name"}
               </button>
@@ -728,6 +747,8 @@ const Australianopen = () => {
                       ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
+                  disabled={!name12}
+
                 >
                   {name12 ? name12 : "player name"}
                 </button>
@@ -741,6 +762,8 @@ const Australianopen = () => {
                       ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
+                  disabled={!name9}
+
                 >
                   {name9 ? name9 : "player name"}
                 </button>
@@ -757,6 +780,8 @@ const Australianopen = () => {
                       ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
+                  disabled={!name10}
+
                 >
                   {name10 ? name10 : "player name"}
                 </button>
@@ -770,6 +795,8 @@ const Australianopen = () => {
                       ? "px-4 p-3  bg-green-600 rounded-lg z-20 w-full"
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
+                  disabled={!name11}
+
                 >
                   {name11 ? name11 : "player name"}
                 </button>
