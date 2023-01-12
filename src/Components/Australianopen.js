@@ -26,6 +26,10 @@ const Australianopen = () => {
   const [finalselected, setFinalSelected] = useState("btn");
   const [finalName, setFinalName] = useState("");
 
+
+const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
+
+
   function changeColorFinal(btn) {
   
     const one = document.getElementById("final1").textContent;
@@ -183,7 +187,7 @@ const Australianopen = () => {
       setName9(null);
     } else {
       setSelected9(btn);
-      setName9(btn === 'btn17' ? 'Zinedine Zidane' : 'Johan Cruyff');
+      setName9(btn === 'btn17' ? ' Zidane' : 'Cruyff');
     }
   }
 
@@ -194,7 +198,7 @@ const Australianopen = () => {
       setName10(null);
     } else {
       setSelected10(btn);
-      setName10(btn === 'btn19' ? 'Franz Beckenbauer' : 'Ferenc Puskas');
+      setName10(btn === 'btn19' ? ' Beckenbauer' : 'Puskas');
     }
   
   }
@@ -205,7 +209,7 @@ const Australianopen = () => {
       setName11(null);
     } else {
       setSelected11(btn);
-      setName11(btn === 'btn21' ? 'Erling Haaland' : 'Mohamed Salah');
+      setName11(btn === 'btn21' ? 'Haaland' : ' Salah');
     }
 
   
@@ -269,44 +273,93 @@ const Australianopen = () => {
     }
   }
 
-  const handleSubmit = (e) => {
-    //  e.preventDefault();
-    const data = {
-      email:email,
-      n1:name,
-      n2:name2,
-      n3:name3,
-      n4:name4,
-      n5:name5,
-      n6:name6,
-      n7:name7,
-      n9:name9,
-      n10:name10,
-      n11:name11,
-      n12:name12,
-      n13:name13,
-      n14:name14,
-      n15:name15,
-      finalist:finalName,
-    
+ const handleSubmit = (e) => {
+    // e.preventDefault();
 
-     
+    
+    if (!email || !name || !name2 || !name3 || !name4 || !name5 || !name6 || !name7 || !name9 || !name10 || !name11 || !name12 || !name13 || !name14 || !name15 || !finalName) {
+        alert("Please fill out all form fields!");
+        return;
+    }
+
+   
+    if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        alert("Please enter a valid email address!");
+        return;
+    }
+
+    const data = {
+        email: email,
+        n1: name,
+        n2: name2,
+        n3: name3,
+        n4: name4,
+        n5: name5,
+        n6: name6,
+        n7: name7,
+        n9: name9,
+        n10: name10,
+        n11: name11,
+        n12: name12,
+        n13: name13,
+        n14: name14,
+        n15: name15,
+        finalist: finalName,
     };
 
     axios
-      .post(
-        "https://sheet.best/api/sheets/9d85ac60-871b-476d-afa4-2f75755439e3",
-        data
-      )
-      .then((response) => {
-        console.log(response);
-        alert('success');
-        
-     
-      });
-        // window.location.reload();
-      
-  };
+        .post(
+            "https://sheet.best/api/sheets/9d85ac60-871b-476d-afa4-2f75755439e3",
+            data
+        )
+        .then((response) => {
+            console.log(response);
+            alert('success');
+            setModal(false)
+            setFinalName('')
+            setName2('')
+            setName3('')
+            setName4('')
+            setName5('')
+            setName6('')
+            setName7('')
+            setName9('')
+            setName10('')
+            setName11('')
+            setName12('')
+            setName13('')
+            setName14('')
+            setName15('')
+            setSelected(null)
+            setSelected2(null)
+            setSelected3(null)
+            setSelected4(null)
+            setSelected5(null)
+            setSelected6(null)
+            setSelected7(null)
+            // setSelected8(null)
+            
+            setSelected9(null)
+            setSelected10(null)
+            setSelected11(null)
+            setSelected12(null)
+            setSelected13(null)
+            setSelected14(null)
+            setSelected15(null)
+            setFinalSelected(null)
+         
+
+
+
+
+
+        })
+        .catch((error) => {
+            console.log(error);
+            alert('An error occurred, please try again later.');
+        });
+};
+
 
   const marGin = isOpen ? '0px':'25px'
   ///////////////////
@@ -328,11 +381,12 @@ const Australianopen = () => {
       </header>
 
       {/* home section  */}
-      <div className=" px-10 bgg flex flex-col-reverse items-center justify-center sm:grid grid-cols-2 gap-3 place-items-center  w-full  h-[500px] object-cover no-repeat bg-center">
+      <div className="bgg w-full  h-[500px] object-cover no-repeat bg-center">
+  <div className=" lg:max-w-[90%] mx-auto gap-10 px-[24px] lg:px-10 py-10 sm:py-0  flex flex-col-reverse items-center justify-center sm:flex-row xl:gap-5 lg:gap-2 place-items-center  ">
         <div className="">
-          <p className=" text-[20px] sm:text-[32px]">AUSTRALIAN OPEN 2022</p>
-          <h2 className="eastman text-[30px] sm:text-[40px]">
-            20% ONLY WIN FREE BET + 20% COMBOBOOST
+          <p className=" text-[20px] sm:text-[25px]">AUSTRALIAN OPEN 2022</p>
+          <h2 className=" eastman text-[30px] sm:text-[35px] lg:text-[40px]">
+            20% ONLY WIN FREE  BET +20% COMBOBOOST
           </h2>
         </div>
         <img 
@@ -340,6 +394,8 @@ const Australianopen = () => {
           className=" xl:w-[462px] xl:h-[448px] md:w-[395px] md:h-[382px] sm:w-[332px] sm:h-[321px] w-[184px] h-[178px] "
         />
       </div>
+      </div>
+    
       {/* bet section */}
       <div className="max-w-[94%] my-5 mx-auto bg-[#1F222E] p-6 rounded-[48px]">
         <p className="text-[32px] eastman text-center ">What should I do?</p>
@@ -363,8 +419,8 @@ const Australianopen = () => {
           What can i win ?
         </p>
         {/* prize section */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
-          <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
+        <div className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-5 gap-4 mt-8  ">
+          <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4 justify-between" >
             <img src={coin} alt="coin" className="w-[42px] h-[42px]" />
             <p className="text-[22px] eastman">1 FREEBET</p>
             <p className="normal">5 euro</p>
@@ -374,7 +430,7 @@ const Australianopen = () => {
             </div>
           </div>
 
-          <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
+          <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4 justify-between">
             <img src={coin} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">2 FREEBET</p>
             <p className="normal">5 euro</p>
@@ -384,7 +440,7 @@ const Australianopen = () => {
             </div>
           </div>
 
-          <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
+          <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4 justify-between">
             <img src={coin} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">3 FREEBET</p>
             <p className="normal">5 euro</p>
@@ -394,7 +450,7 @@ const Australianopen = () => {
             </div>
           </div>
 
-          <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
+          <div className="rounded-xl flex flex-col items-center bg-[#15171F] w-full  px-3 py-4 justify-between ">
             <img src={coin} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">4 FREEBET</p>
             <p className="normal">10 euro</p>
@@ -404,9 +460,9 @@ const Australianopen = () => {
             </div>
           </div>
 
-          <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4">
+          <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 w-full py-4  justify-between sm:col-span-2 md:col-span-1  ">
             <img src={gift} alt="coin" className="w-[42px] h-[42px]"/>
-            <p className="text-[22px] eastman">GRAND PRIZE</p>
+            <p className="text-[20px] eastman text-center ">GRAND PRIZE</p>
             <p className="normal">iphone 14 max pro</p>
             <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
               <p>For 3-5</p>
@@ -429,19 +485,19 @@ const Australianopen = () => {
           <button className={`w-[200px] px-10 p-[10px] bg-white text-black rounded-lg  lg:mt-[13px]`}>
            1/8 finals
           </button>
-          <button className="w-[200px] px-10 mt-[170px]   sm:-mt-[1px]  md:-mt-[55px]    lg:-mt-[10px]  p-[10px] bg-white text-black rounded-lg">
+          <button className="w-[200px] px-10 mt-[180px]   sm:-mt-[1px]  md:-mt-[45px]    lg:-mt-[10px]  p-[10px] bg-white text-black rounded-lg">
           1/4 finals
           </button>
-          <button className="w-[200px] -mt-[9px]  sm:-mt-[70px] px-10 md:-mt-[90px] lg:-mt-[82px] bg-white text-black p-[10px]  rounded-lg">
+          <button className="w-[200px] -mt-[30px]  sm:-mt-[70px] px-10 md:-mt-[90px] lg:-mt-[82px] bg-white text-black p-[10px]  rounded-lg">
           Semi-final
           </button>
-          <button className="w-[200px] mt-[120px]  sm:mt-[220px]  px-10  md:mt-[300px]   lg:mt-[240px] p-[10px] bg-white text-black rounded-lg">
+          <button className=" w-[200px]  mt-[260px]  sm:mt-[260px]  px-10  md:mt-[330px]   lg:mt-[240px] p-[10px] bg-white text-black rounded-lg">
           Semi-final
           </button>
-          <button className="w-[200px] mt-[140px] px-10 sm:-mt-[15px] md:-mt-[30px]  lg:-mt-[80px]  p-[10px] bg-white text-black  rounded-lg">
+          <button className=" w-[200px] -mt-[40px] px-10 sm:-mt-[45px] md:-mt-[90px]  lg:-mt-[80px]  p-[10px] bg-white text-black  rounded-lg">
            1/4 finals
           </button>
-          <button className=" w-[200px] px-10 p-[10px] mt-[60px] sm:-mt-[73px]   md:-mt-[60px]  lg:-mt-[39px] bg-white text-black  rounded-lg">
+          <button className=" w-[200px] px-10 p-[10px] mt-[98px] sm:-mt-[82px]   md:-mt-[60px]  lg:-mt-[40px] bg-white text-black  rounded-lg">
            1/8 final
           </button>
         </div>
@@ -563,7 +619,7 @@ const Australianopen = () => {
               </div>
             </div>
 
-            <div className="border-2 my-10 grid grid-cols-2 gap-8 p-3 w-full lg:p-8 rounded-[32px]">
+            <div className="border-2 my-10 grid grid-cols-2 gap-8 p-3 w-full lg:p-8 md:rounded-[32px]">
               <div className="grid md:grid-cols-2 gap-5 p-3 border-2 lg:p-[16px] rounded-[16px]">
                 <button
                   id="test"
@@ -586,7 +642,7 @@ const Australianopen = () => {
                   }}
                   className={
                     selected5 === "btn10"
-                      ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full"
+                      ? "px-4 p-3 bg-green-600  rounded-lg z-20 w-full" 
                       : "px-4 p-3 bg-[#42475E] rounded-lg z-20 w-full"
                   }
                   disabled={!name2}
@@ -646,6 +702,7 @@ const Australianopen = () => {
               >
                 {name5 ? name5 : "player name"}
               </button>
+
               <button
                 id="test6"
                 onClick={() => {
@@ -735,7 +792,7 @@ const Australianopen = () => {
               </button>
             </div>
 
-            <div className="border-2 my-10 grid grid-cols-2 gap-8 w-full p-8 rounded-[32px]">
+            <div className="border-2 my-10 grid grid-cols-2 gap-8 w-full lg:p-8 p-3 rounded-[32px]">
               <div className="grid md:grid-cols-2 gap-5 border-2 p-[16px] rounded-[16px]">
                 <button
                   id="no1"
@@ -932,15 +989,15 @@ const Australianopen = () => {
           </button>
         </div>
 
-        <div className={  ` max-w-[90%] mx-auto my-[${marGin}]  bg-[#272B3B] flex items-center justify-between p-4 transition-all duration-300`}>
+        <div  onClick={()=>{setIsOpen(!isOpen)}} className={  `${round} max-w-[90%] mx-auto my-[${marGin}]  bg-[#272B3B] flex items-center justify-between p-4 transition-all duration-300`}>
           <div className="flex items-center gap-4">
             <img src={i} />
             <p>Terms & Conditions</p>
           </div>
-          <div onClick={()=>{setIsOpen(!isOpen)}} className='text-2xl font-medium cursor-pointer'>{isOpen ?<IoIosArrowDown/>:<IoIosArrowForward />}</div>
+          <div className='text-2xl font-medium cursor-pointer'>{isOpen ?<IoIosArrowDown/>:<IoIosArrowForward />}</div>
 
         </div>
-        {isOpen ? <div className="max-w-[90%] mx-auto h-auto bg-[#272B3B] transition-all mb-5 p-5 text-lg ">
+        {isOpen ? <div className="rounded-b-[16px] max-w-[90%] mx-auto h-auto bg-[#272B3B] transition-all mb-5 p-5 text-lg ">
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
@@ -963,7 +1020,7 @@ nihil, eveniet aliquid culpa officia aut!</p>
         {modal ? (
           <FullScreenModal >
             <div className="">
-       <div className=" my-5  max-w-[90%] mx-auto bg-[#272B3B] p-4">
+       <div className=" my-5  lg:max-w-[55%] max-w-[100%] h-auto rounded-[24px] mx-auto bg-[#272B3B] p-4">
             <img
               src={close}
               onClick={() => {
@@ -971,9 +1028,9 @@ nihil, eveniet aliquid culpa officia aut!</p>
               }}
               className="float-right cursor-pointer"
             />
-            <div className=" lg:p-[40px] flex flex-col items-center gap-5">
+            <div className="  flex flex-col items-center gap-5">
               <img src={popUp} />
-              <p className="lg:text-[24px] lg:w-[70%] mx-auto text-center">
+              <p className="lg:text-[24px] text-[18px] w-[100%] mx-auto text-center  ">
                 To complete the Prediction, you need to provide email your
                 account and need to bet 5 EUR for any tennis match. Otherwise,
                 the Prediction will not be considered valid.
@@ -985,11 +1042,11 @@ nihil, eveniet aliquid culpa officia aut!</p>
                   placeholder="Email..."
                   value={email}
                   onChange={(e) =>{setemail(e.target.value)}}
-                  className="mt-3 p-2 outline-none bg-[#34384D] border-[1px]"
+                  className="mt-3 p-2 outline-none bg-[#34384D] border-[1px] rounded-[16px]"
                 />
               </div>
               <button
-                className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-xl"
+                className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-[16px] w-[70%]"
                   onClick={() => {
             handleSubmit();
           }}
@@ -1027,7 +1084,7 @@ export default Australianopen;
 
 const FullScreenModal = ({ children }) => {
   return (
-    <div className="fixed top-0 left-0 right-0 bottom-0 z-50 modal  flex items-center justify-center p-10">
+    <div className="fixed top-0 left-0 right-0 bottom-0 z-50 modal  flex items-center justify-center lg:p-10 p-5">
       {children}
     </div>
   );

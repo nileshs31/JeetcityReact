@@ -39,6 +39,7 @@ const Home = () => {
     <div className=" text-white ">
       {/* Header section */}
       <header className="p-4 px-8 flex justify-between  2xl:ml-32 2xl:mt-5">
+        
         <img src={logo} alt="logo" className="w-[134px] h-[35px] object-cover " />
         <Link to='/Australianopen'> <p className="  font-medium text-center border-b-2">
           Australianopen
