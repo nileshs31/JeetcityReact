@@ -15,9 +15,6 @@ import p6 from "../Images/p6.png";
 import p7 from "../Images/p7.png";
 import p8 from "../Images/p8.png";
 import p9 from "../Images/p9.png";
-import p10 from "../Images/p10.png";
-import p11 from "../Images/p11.png";
-import p12 from "../Images/p12.png";
 import p13 from "../Images/p13.png";
 import homephone from "../Images/homephone.png";
 import fm1 from "../Images/fm1.png";
@@ -50,11 +47,11 @@ const Home = () => {
           <div className=" text-[24px] sm:text-[30px] lg:text-[40px] font-bold eastman  ">
             <h2 className=" text-center lg:text-start mt-10">
               Activate Your
-              <span className="text-[#f67409] pl-2">Promocode</span>
+              <span className="text-[#f67409] pl-2">IC1</span>
             </h2>
             <h2 className="lg:-mt-3 text-center lg:text-start">
-              Test and get
-              <span className="text-[#48b415] pl-2">100 Free spins</span>
+              Promocode and get up to 
+              <span className="text-[#48b415] pl-2">₹20,000</span>
             </h2>
           </div>
 
@@ -74,7 +71,7 @@ const Home = () => {
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
                 <p className="normal">
-                  Rapid Cashouts Processed in 48-72 hours
+                  Rapid Cashouts processing in 3 hours
                 </p>
               </div>
               <div className="flex ">
@@ -83,7 +80,7 @@ const Home = () => {
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
                 <p className="normal">
-                  Low Risk: Play as little as 1c per spin
+                  Popular Paymnet methods: UPI, PAYTM, IMPS and more
                 </p>
               </div>
               <div className="flex">
@@ -92,7 +89,8 @@ const Home = () => {
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
                 <p className="normal sm:text-center">
-                  Reliable Odds:Our games are independently audited
+                Live games and Dealers: Roulette, Andar Bahar, Teen Patti 
+
                 </p>
               </div>
               <div className="flex">
@@ -101,7 +99,7 @@ const Home = () => {
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
                 <p className="normal">
-                  SSL Security:On all credit card payments
+                  Crypto Friendly: 12 crypto coins available for deposit
                 </p>
               </div>
               <div className="flex ">
@@ -109,7 +107,9 @@ const Home = () => {
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
-                <p className="normal  ">New,text & new title</p>
+                <p className="normal  ">
+                  Regular Tournaments and Drops 
+                </p>
               </div>
        
 
@@ -124,10 +124,10 @@ const Home = () => {
                 <div className=" bg-[#1F222E] p-3 flex gap-3 items-center">
                   <img src={one} />
                   <div className="flex">
-                    <p className="text-[#48B415] font-normal font-[500] pr-1">Resistrate on</p>
+                    <p className="text-[#48B415] font-normal font-[500] pr-1">Sign Up at</p>
                     <div className="flex items-center pl-2 ">
                       <img src={jeetlogo} className="w-[20px] h-[20px]"/> 
-                      <p className="font-normal font-[500] pl-1">Jeetlogo</p>
+                      <p className="font-normal font-[500] pl-1">JeetCity</p>
                     </div>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ const Home = () => {
   <div className=" bg-[#1F222E] flex p-3 gap-3 items-center w-full">
                   <img src={two} />
                   <div className="flex ">
-                  <p className="font-normal font-[500]">Use <span className="text-[#f67409] ">BONUS100</span> code</p>
+                  <p className="font-normal font-[500]">Use <span className="text-[#f67409] ">IC1</span> code</p>
                   </div>
                 </div>
 
@@ -162,20 +162,17 @@ const Home = () => {
 
       {/* footer */}
       <footer className="flex items-center mt-7 gap-2 p-4 bg-[#1F222E] justify-center flex-wrap">
-        <img src={p1} className="w-[54px] h-[30px]" />
-        <img src={p2} className="w-[82px] h-[30px]" />
-        <img src={p3}  className="w-[90px] h-[30px]"/>
-        <img src={p8}  className="w-[112px] h-[30px]"/>
-        <img src={p4}  className="w-[94px] h-[30px]"/>
-        <img src={p5}  className="w-[100px] h-[30px]"/>
-        <img src={p6}  className="w-[134px] h-[30px]"/>
-        <img src={p7}  className="w-[82px] h-[30px]"/>
+        <img src={p1} className="w-[60px] h-[25px]" />
+        <img src={p2} className="w-[62px] h-[25px]" />
+        <img src={p3}  className="w-[74px] h-[25px]"/>
+        <img src={p4}  className="w-[88px] h-[25px]"/>
+        <img src={p5}  className="w-[80px] h-[25px]"/>
+        <img src={p6}  className="w-[70px] h-[25px]"/>
+        <img src={p7}  className="w-[144px] h-[25px]"/>
+        <img src={p8}  className="w-[81px] h-[25px]"/>
         {/* <img src={p8} /> */}
-        <img src={p9}  className="w-[102px] h-[30px]"/>
-        <img src={p10}  className="w-[86px] h-[30px]"/>
-        <img src={p11} className="w-[86px] h-[30px]" />
-        <img src={p12} />
-        <img src={p13} className="w-[104px] h-[30px]" />
+        <img src={p9}  className="w-[86px] h-[25px]"/>
+        <img src={p13} className="w-[72px] h-[25px]" />
       
 
       </footer>
