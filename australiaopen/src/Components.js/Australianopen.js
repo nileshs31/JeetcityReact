@@ -336,13 +336,13 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
   ///////////////////
 
   return (
-    <div className="text-white ">
+    <div className="text-white  ">
       {/* <p>check </p> */}
       <header className="flex justify-between items-center p-3">
         <img src={logo} alt="logo" className="w-[132px] h-[34px]" />
         <div className="flex gap-5 items-center">
          
-        <button className="bg-[#48b415] p-2 px-4 rounded-3xl font-medium text-center">
+        <button className="bg-[#48b415] em p-2 px-4 rounded-3xl font-medium text-center">
           Sign Up
         </button>
         </div>
@@ -369,7 +369,7 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
       <div className="max-w-[94%] my-5 mx-auto bg-[#1F222E] p-6 rounded-[48px]">
         <p className="text-[32px] eastman text-center ">What should I do?</p>
         <div>
-          <p className="text-[24px] normal text-center mt-8  ">
+          <p className="text-[24px] er text-center mt-8  ">
             Совершай депозит от{" "}
             <span className="text-[#48B415]">30 евро с 16 по 29 января,</span>{" "}
             получай{" "}
@@ -392,8 +392,8 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4 justify-between" >
             <img src={coin} alt="coin" className="w-[42px] h-[42px]" />
             <p className="text-[22px] eastman">1 FREEBET</p>
-            <p className="normal">5 euro</p>
-            <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
+            <p className="em">5 euro</p>
+            <div className="text-[18px] flex text-center er flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
               <p>For 3-5</p>
               <p>guessed teams</p>
             </div>
@@ -402,8 +402,8 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4 justify-between">
             <img src={coin} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">2 FREEBET</p>
-            <p className="normal">5 euro</p>
-            <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
+            <p className="em">5 euro</p>
+            <div className="text-[18px] er text-center flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
               <p>For 3-5</p>
               <p>guessed teams</p>
             </div>
@@ -412,8 +412,8 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 py-4 justify-between">
             <img src={coin} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">3 FREEBET</p>
-            <p className="normal">5 euro</p>
-            <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
+            <p className="em">5 euro</p>
+            <div className=" er text-[18px] text-center flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
               <p>For 3-5</p>
               <p>guessed teams</p>
             </div>
@@ -422,9 +422,9 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] w-full  px-3 py-4 justify-between ">
             <img src={coin} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[22px] eastman">4 FREEBET</p>
-            <p className="normal">10 euro</p>
-            <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
-              <p>For 3-5</p>
+            <p className="em">10 euro</p>
+            <div className=" er text-[18px] flex flex-col items-center bg-[#1F222E] w-full text-center rounded-xl p-2 mt-2">
+              <p >For 3-5</p>
               <p>guessed teams</p>
             </div>
           </div>
@@ -432,14 +432,14 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
           <div className="rounded-xl flex flex-col items-center bg-[#15171F] px-3 w-full py-4  justify-between sm:col-span-2 md:col-span-1  ">
             <img src={gift} alt="coin" className="w-[42px] h-[42px]"/>
             <p className="text-[20px] eastman text-center ">GRAND PRIZE</p>
-            <p className="normal">iphone 14 max pro</p>
-            <div className="text-[18px] flex flex-col items-center bg-[#1F222E] w-full rounded-xl p-2 mt-2">
-              <p>For 3-5</p>
-              <p>guessed teams</p>
+            <p className="em">iphone 14 max pro</p>
+            <div className=" er text-[18px] flex flex-col items-center  bg-[#1F222E] w-full rounded-xl p-2 mt-2">
+              <p className="text-center">For 3-5</p>
+              <p className="text-center">guessed teams</p>
             </div>
           </div>
         </div>
-        <p className="text-center mt-5">
+        <p className="text-center mt-5 er">
           To participate in the promo, make a qualifying bet of 5+ euros on any
           tennis match.
         </p>
@@ -448,7 +448,7 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
       {/* predictions section  */}
       <p className="text-center m-4 text-3xl">Your predictions</p>
 
-      <div className="  flex flex-col items-center w-full sm:h-[1600px]  h-[2000px] px-2">
+      <div className=" em flex flex-col items-center w-full sm:h-[1600px]  h-[2000px] px-2">
 
         <div className="w-[2px]   border-2 lg:h-[1599px] sm:h-[1600px] h-[2000px]   flex flex-col items-center  gap-[250px] z-20">
           <button className={`w-[200px] px-10 p-[10px] bg-white text-black rounded-lg  lg:mt-[13px]`}>
@@ -949,7 +949,7 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
       <div className="  mt-24 md:mt-0">
         <div className="flex items-center justify-center ">
           <button
-            className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-xl"
+            className="bg-[#48B415] my-6 text-center em p-3 px-6 rounded-xl"
             onClick={() => {
               setModal(true);
             }}
@@ -958,7 +958,7 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
           </button>
         </div>
 
-        <div  onClick={()=>{setIsOpen(!isOpen)}} className={  `${round} max-w-[90%] mx-auto my-[${marGin}]  bg-[#272B3B] flex items-center justify-between p-4 transition-all duration-300`}>
+        <div  onClick={()=>{setIsOpen(!isOpen)}} className={  `${round} max-w-[90%] mx-auto my-[${marGin}] em  bg-[#272B3B] flex items-center justify-between p-4 transition-all duration-300`}>
           <div className="flex items-center gap-4">
             <img src={i} />
             <p>Terms & Conditions</p>
@@ -966,7 +966,7 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
           <div className='text-2xl font-medium cursor-pointer'>{isOpen ?<IoIosArrowDown/>:<IoIosArrowForward />}</div>
 
         </div>
-        {isOpen ? <div className="rounded-b-[16px] max-w-[90%] mx-auto h-auto bg-[#272B3B] transition-all mb-5 p-5 text-lg ">
+        {isOpen ? <div className="rounded-b-[16px] er max-w-[90%] mx-auto h-auto bg-[#272B3B] er transition-all mb-5 p-5 text-lg ">
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
@@ -989,7 +989,7 @@ nihil, eveniet aliquid culpa officia aut!</p>
         {modal ? (
           <FullScreenModal >
             <div className="">
-       <div className=" my-5  lg:max-w-[55%] max-w-[100%] h-auto rounded-[24px] mx-auto bg-[#272B3B] p-4">
+       <div className=" my-5  lg:max-w-[37%] md:max-w-[80%] h-auto rounded-[24px] mx-auto bg-[#272B3B] p-4">
             <img
               src={close}
               onClick={() => {
@@ -997,25 +997,25 @@ nihil, eveniet aliquid culpa officia aut!</p>
               }}
               className="float-right cursor-pointer"
             />
-            <div className="  flex flex-col items-center gap-5">
+            <div className="  flex flex-col items-center justify-center gap-5 ">
               <img src={popUp} />
-              <p className="lg:text-[24px] text-[18px] w-[100%] mx-auto text-center  ">
+              <p className="lg:text-[19px] text-[18px] w-[90%] er mx-auto  text-center   ">
                 To complete the Prediction, you need to provide email your
                 account and need to bet 5 EUR for any tennis match. Otherwise,
                 the Prediction will not be considered valid.
               </p>
-              <div className="flex flex-col mt-4 w-[70%] mx-auto">
+              <div className="flex flex-col mt-4 w-[90%] mx-auto">
                 <label className="text-xl ">Email</label>
                 <input
                   type="email"
                   placeholder="Email..."
                   value={email}
                   onChange={(e) =>{setemail(e.target.value)}}
-                  className="mt-3 p-2 outline-none bg-[#34384D] border-[1px] rounded-[16px]"
+                  className="mt-3 p-3 outline-none bg-[#34384D] pl-4 rounded-[16px]"
                 />
               </div>
               <button
-                className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-[16px] w-[70%]"
+                className="bg-[#48B415] my-6 text-center p-3 px-6 rounded-[16px] w-[90%]"
                   onClick={() => {
             handleSubmit();
           }}

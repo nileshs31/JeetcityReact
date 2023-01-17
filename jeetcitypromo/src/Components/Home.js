@@ -51,7 +51,7 @@ const Home = () => {
       {/*Home section  */}
       <div className="  lg:grid grid-cols-2 h-auto  ">
         <div className="flex flex-col item-center gap-5 2xl:ml-28 2xl:mt-5 px-8 ">
-          <div className=" text-[24px] sm:text-[30px] lg:text-[40px] font-bold eastman  ">
+          <div className=" text-[24px] sm:text-[30px] lg:text-[40px] font-bold eastman pl-1 ">
             <h2 className=" text-center lg:text-start mt-10">
               Activate Your
               <span className="text-[#f67409] pl-2">IC1</span>
@@ -71,20 +71,20 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col gap-3 items-center lg:items-start  lg:-mt-4">
-            <div className="p-2 flex flex-col gap-3 w-full">
+            <div className="p-2 flex flex-col gap-3 w-full em">
               <div className="flex justify-start sm:justify-center lg:justify-start ">
                 <img
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
-                <p className="normal">Rapid Cashouts processing in 3 hours</p>
+                <p className="">Rapid Cashouts processing in 3 hours</p>
               </div>
               <div className="flex justify-start sm:justify-center lg:justify-start ">
                 <img
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
-                <p className="normal">
+                <p className="">
                   Popular Paymnet methods: UPI, PAYTM, IMPS and more
                 </p>
               </div>
@@ -93,7 +93,7 @@ const Home = () => {
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
-                <p className="normal ">
+                <p className="">
                   Live games and Dealers: Roulette, Andar Bahar, Teen Patti
                 </p>
               </div>
@@ -102,7 +102,7 @@ const Home = () => {
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
-                <p className="normal">
+                <p className="">
                   Crypto Friendly: 12 crypto coins available for deposit
                 </p>
               </div>
@@ -111,22 +111,22 @@ const Home = () => {
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
-                <p className="normal  ">Regular Tournaments and Drops</p>
+                <p className="  ">Regular Tournaments and Drops</p>
               </div>
 
               {/* btn */}
-              <button className="rounded-xl p-3 hidden lg:inline text-center bg-[#48b415] w-[220px]  mt-5">
+              <button className="rounded-xl p-3 em hidden lg:inline text-center bg-[#48b415] w-[220px]  mt-5">
                 Play
               </button>
             </div>
 
             {/* features */}
-            <div className=" lg:w-[950px] w-auto grid lg:grid-cols-3 gap-2 lg:gap-0 z-10 my-1 xl:mt-10  ">
+            <div className=" lg:w-[950px] em w-auto grid lg:grid-cols-3 gap-2 lg:gap-0 z-10 my-1 xl:mt-10  ">
               <div className="relative">
                 <img src={bg1} className="hidden lg:flex" />
                 <img src={mbg1} className="lg:hidden" />
 
-                <div className="flex items-center absolute top-5 left-20 lg:top-[15px] lg:left-16">
+                <div className="flex items-center absolute top-5 left-20 lg:top-[16px] lg:left-16">
                   <p className="text-[#48B415] font-normal font-[500] pr-1">
                     Sign Up at
                   </p>
@@ -141,7 +141,7 @@ const Home = () => {
                 <img src={bg2} className="hidden lg:flex" />
                 <img src={mbg2} className="lg:hidden " />
 
-                <div className="flex items-center absolute top-5 left-20 lg:top-[15px] lg:left-16 ">
+                <div className="flex items-center absolute top-5 left-20 lg:top-[17px] lg:left-18 ">
                   <p className="font-normal font-[500]">
                     Use <span className="text-[#f67409] ">IC1</span> code
                   </p>
@@ -152,13 +152,13 @@ const Home = () => {
                 <img src={bg3} className="hidden lg:flex " />
                 <img src={mbg3} className="lg:hidden" />
 
-                <div className="flex items-center absolute top-5 left-20 lg:top-[15px] lg:left-16">
+                <div className="flex items-center absolute top-5 left-20 lg:top-[17px] lg:left-18">
                   <p className="font-normal font-[500] ">
                     <span className="text-[#48B415] ">Start</span> Winning!
                   </p>
                 </div>
               </div>
-              <button className="rounded-xl p-3 lg:hidden  text-center bg-[#48b415] w-full lg:hidden  mt-5">
+              <button className="rounded-xl em p-3 lg:hidden  text-center bg-[#48b415] w-full lg:hidden  mt-5">
                 Play
               </button>
             </div>

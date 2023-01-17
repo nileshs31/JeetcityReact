@@ -1,7 +1,21 @@
 @font-face {
   font-family: "east";
-  src: url(./Fonts/Fontspring-DEMO-engram-semibold.otf)
+  src: url(./Fonts/Eastman-Bold.otf)
 }
+
+@font-face {
+  font-family: "eastregular";
+  src: url(./Fonts/Eastman-Regular.otf)
+}
+
+@font-face {
+  font-family: "eastmedium";
+  src: url(./Fonts/Eastman-Medium.otf)
+}
+
+
+
+
 
 @font-face {
   font-family: "normal";
@@ -12,6 +26,19 @@
 .eastman {
   font-family: 'east';
 }
+
+.er{
+  font-family: 'eastregular';
+}
+
+.em{
+  font-family: 'eastmedium';
+}
+
+
+
+
+
 
 .normal {
   font-family: 'normal'
