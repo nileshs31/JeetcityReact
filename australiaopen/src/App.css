@@ -57,3 +57,40 @@
 .modal {
   background: rgba(0, 0, 0, 0.8);
 }
+
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 37%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .container {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .container {
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 42%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .container {
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    max-width: 100%;
+  }
+}

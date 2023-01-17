@@ -989,13 +989,13 @@ nihil, eveniet aliquid culpa officia aut!</p>
         {modal ? (
           <FullScreenModal >
             <div className="">
-       <div className=" my-5  lg:max-w-[37%] md:max-w-[80%] h-auto rounded-[24px] mx-auto bg-[#272B3B] p-4">
+       <div className=" my-5 relative container h-auto rounded-[24px] mx-auto bg-[#272B3B] p-4">
             <img
               src={close}
               onClick={() => {
                 setModal(false);
               }}
-              className="float-right cursor-pointer"
+              className="absolute top-[5%] right-[5%] cursor-pointer"
             />
             <div className="  flex flex-col items-center justify-center gap-5 ">
               <img src={popUp} />
