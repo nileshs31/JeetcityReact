@@ -121,7 +121,7 @@ const Home = () => {
             </div>
 
             {/* features */}
-            <div className=" lg:w-[950px] w-auto grid lg:grid-cols-3 gap-2 lg:gap-6 z-10 my-1 xl:mt-10  ">
+            <div className=" lg:w-[950px] w-auto grid lg:grid-cols-3 gap-2 lg:gap-0 z-10 my-1 xl:mt-10  ">
               <div className="relative">
                 <img src={bg1} className="hidden lg:flex" />
                 <img src={mbg1} className="lg:hidden" />
