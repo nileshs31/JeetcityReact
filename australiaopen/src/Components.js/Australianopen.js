@@ -314,40 +314,10 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
         )
         .then((response) => {
             console.log(response);
-            alert('success');
-            setModal(false)
+         
+            // setModal(false)
             window.location.href="https://sports.jeetcity.com/en/tennis/australian-open-men-singles-l-4"
-            setFinalName('')
-            setName2('')
-            setName3('')
-            setName4('')
-            setName5('')
-            setName6('')
-            setName7('')
-            setName9('')
-            setName10('')
-            setName11('')
-            setName12('')
-            setName13('')
-            setName14('')
-            setName15('')
-            setSelected(null)
-            setSelected2(null)
-            setSelected3(null)
-            setSelected4(null)
-            setSelected5(null)
-            setSelected6(null)
-            setSelected7(null)
-            // setSelected8(null)
-            
-            setSelected9(null)
-            setSelected10(null)
-            setSelected11(null)
-            setSelected12(null)
-            setSelected13(null)
-            setSelected14(null)
-            setSelected15(null)
-            setFinalSelected(null)
+          
          
 
 
