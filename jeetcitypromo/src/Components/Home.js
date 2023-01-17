@@ -34,10 +34,11 @@ import bg3 from "../Images/bg3.png";
 import mbg1 from "../Images/mbg1.png";
 import mbg2 from "../Images/mbg2.png";
 import mbg3 from "../Images/mbg3.png";
+import home766 from "../Images/home766.png";
 
 const Home = () => {
   return (
-    <div className=" text-white ">
+    <div className=" text-white h-[700px]">
       {/* Header section */}
       <header className="p-4 px-8 flex justify-between  2xl:ml-32 2xl:mt-5">
         <img
@@ -48,7 +49,7 @@ const Home = () => {
       </header>
 
       {/*Home section  */}
-      <div className="  lg:grid grid-cols-2  ">
+      <div className="  lg:grid grid-cols-2 h-auto  ">
         <div className="flex flex-col item-center gap-5 2xl:ml-28 2xl:mt-5 px-8 ">
           <div className=" text-[24px] sm:text-[30px] lg:text-[40px] font-bold eastman  ">
             <h2 className=" text-center lg:text-start mt-10">
@@ -64,7 +65,7 @@ const Home = () => {
           <div>
             <img src={homephone} className=" sm:hidden  " />
             <img
-              src={home765}
+              src={home766}
               className=" hidden sm:flex lg:hidden object-cover"
             />
           </div>
@@ -92,7 +93,7 @@ const Home = () => {
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
-                <p className="normal sm:text-center">
+                <p className="normal ">
                   Live games and Dealers: Roulette, Andar Bahar, Teen Patti
                 </p>
               </div>
@@ -166,12 +167,12 @@ const Home = () => {
 
         <img
           src={homeBg}
-          className=" hidden lg:flex h-full object-cover mt-7 "
+          className=" hidden lg:flex h-full object-cover  mt-7"
         />
       </div>
 
       {/* footer */}
-      <footer className="flex items-center mt-7 gap-2 p-4 bg-[#1F222E] justify-center flex-wrap">
+      <footer className="  flex items-center mt-7 gap-2 p-4 bg-[#1F222E] justify-center flex-wrap">
         <img src={p1} className="w-[60px] h-[25px]" />
         <img src={p2} className="w-[62px] h-[25px]" />
         <img src={p3} className="w-[74px] h-[25px]" />
