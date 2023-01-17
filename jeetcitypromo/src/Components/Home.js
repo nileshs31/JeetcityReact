@@ -27,18 +27,24 @@ import jeetlogo from "../Images/jeetlogo.png";
 import himg from "../Images/himg.png";
 import homeBg from "../Images/homeBg.png";
 // import { Link } from "react-router-dom";
+import bg1 from "../Images/bg1.png";
+import bg2 from "../Images/bg2.png";
+import bg3 from "../Images/bg3.png";
 
-
+import mbg1 from "../Images/mbg1.png";
+import mbg2 from "../Images/mbg2.png";
+import mbg3 from "../Images/mbg3.png";
 
 const Home = () => {
-
   return (
     <div className=" text-white ">
       {/* Header section */}
       <header className="p-4 px-8 flex justify-between  2xl:ml-32 2xl:mt-5">
-        
-        <img src={logo} alt="logo" className="w-[134px] h-[35px] object-cover " />
-      
+        <img
+          src={logo}
+          alt="logo"
+          className="w-[134px] h-[35px] object-cover "
+        />
       </header>
 
       {/*Home section  */}
@@ -50,7 +56,7 @@ const Home = () => {
               <span className="text-[#f67409] pl-2">IC1</span>
             </h2>
             <h2 className="lg:-mt-3 text-center lg:text-start">
-              Promocode and get up to 
+              Promocode and get up to
               <span className="text-[#48b415] pl-2">₹20,000</span>
             </h2>
           </div>
@@ -64,17 +70,15 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col gap-3 items-center lg:items-start  lg:-mt-4">
-           
-              <div className="flex">
+            <div className="p-2 flex flex-col gap-3 w-full">
+              <div className="flex justify-start sm:justify-center lg:justify-start ">
                 <img
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
-                <p className="normal">
-                  Rapid Cashouts processing in 3 hours
-                </p>
+                <p className="normal">Rapid Cashouts processing in 3 hours</p>
               </div>
-              <div className="flex ">
+              <div className="flex justify-start sm:justify-center lg:justify-start ">
                 <img
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
@@ -83,17 +87,16 @@ const Home = () => {
                   Popular Paymnet methods: UPI, PAYTM, IMPS and more
                 </p>
               </div>
-              <div className="flex">
+              <div className="flex justify-start sm:justify-center lg:justify-start ">
                 <img
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
                 <p className="normal sm:text-center">
-                Live games and Dealers: Roulette, Andar Bahar, Teen Patti 
-
+                  Live games and Dealers: Roulette, Andar Bahar, Teen Patti
                 </p>
               </div>
-              <div className="flex">
+              <div className="flex justify-start sm:justify-center lg:justify-start ">
                 <img
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
@@ -102,79 +105,83 @@ const Home = () => {
                   Crypto Friendly: 12 crypto coins available for deposit
                 </p>
               </div>
-              <div className="flex ">
+              <div className="flex justify-start sm:justify-center lg:justify-start ">
                 <img
                   src={check}
                   className="sm:w-[24px] sm:h-[24px] w-[22px] h-[22px]"
                 />
-                <p className="normal  ">
-                  Regular Tournaments and Drops 
-                </p>
+                <p className="normal  ">Regular Tournaments and Drops</p>
               </div>
-       
 
-            {/* btn */}
-            <button className="rounded-xl p-3  text-center bg-[#48b415] w-[220px]  mt-5">
-              Play
-            </button>
+              {/* btn */}
+              <button className="rounded-xl p-3 hidden lg:inline text-center bg-[#48b415] w-[220px]  mt-5">
+                Play
+              </button>
+            </div>
 
             {/* features */}
-            <div className=" lg:w-[950px] w-auto grid lg:grid-cols-3  gap-6 z-10 mt-5 ">
-                   
-                <div className=" bg-[#1F222E] p-3 flex gap-3 items-center">
-                  <img src={one} />
-                  <div className="flex">
-                    <p className="text-[#48B415] font-normal font-[500] pr-1">Sign Up at</p>
-                    <div className="flex items-center pl-2 ">
-                      <img src={jeetlogo} className="w-[20px] h-[20px]"/> 
-                      <p className="font-normal font-[500] pl-1">JeetCity</p>
-                    </div>
+            <div className=" lg:w-[950px] w-auto grid lg:grid-cols-3 gap-2 lg:gap-6 z-10 my-1 xl:mt-10  ">
+              <div className="relative">
+                <img src={bg1} className="hidden lg:flex" />
+                <img src={mbg1} className="lg:hidden" />
+
+                <div className="flex items-center absolute top-5 left-20 lg:top-[15px] lg:left-16">
+                  <p className="text-[#48B415] font-normal font-[500] pr-1">
+                    Sign Up at
+                  </p>
+                  <div className="flex items-center pl-2 ">
+                    <img src={jeetlogo} className="w-[20px] h-[20px]" />
+                    <p className="font-normal font-[500] pl-1">JeetCity</p>
                   </div>
                 </div>
+              </div>
 
+              <div className="relative">
+                <img src={bg2} className="hidden lg:flex" />
+                <img src={mbg2} className="lg:hidden " />
 
-  <div className=" bg-[#1F222E] flex p-3 gap-3 items-center w-full">
-                  <img src={two} />
-                  <div className="flex ">
-                  <p className="font-normal font-[500]">Use <span className="text-[#f67409] ">IC1</span> code</p>
-                  </div>
+                <div className="flex items-center absolute top-5 left-20 lg:top-[15px] lg:left-16 ">
+                  <p className="font-normal font-[500]">
+                    Use <span className="text-[#f67409] ">IC1</span> code
+                  </p>
                 </div>
+              </div>
 
-  <div className="  bg-[#1F222E] flex p-3 gap-3 items-center">
-                  <img src={three} />
-                  <div className="flex">
-                  <p  className="font-normal font-[500] "><span className="text-[#48B415] ">Start</span> Winning!</p>
-                  </div>
+              <div className=" relative">
+                <img src={bg3} className="hidden lg:flex " />
+                <img src={mbg3} className="lg:hidden" />
+
+                <div className="flex items-center absolute top-5 left-20 lg:top-[15px] lg:left-16">
+                  <p className="font-normal font-[500] ">
+                    <span className="text-[#48B415] ">Start</span> Winning!
+                  </p>
                 </div>
-
-
+              </div>
+              <button className="rounded-xl p-3 lg:hidden  text-center bg-[#48b415] w-full lg:hidden  mt-5">
+                Play
+              </button>
             </div>
-          
           </div>
         </div>
 
-          <img
-            src={homeBg}
-            className=" hidden lg:flex h-full object-cover "
-          />
-      
+        <img
+          src={homeBg}
+          className=" hidden lg:flex h-full object-cover mt-7 "
+        />
       </div>
 
       {/* footer */}
       <footer className="flex items-center mt-7 gap-2 p-4 bg-[#1F222E] justify-center flex-wrap">
         <img src={p1} className="w-[60px] h-[25px]" />
         <img src={p2} className="w-[62px] h-[25px]" />
-        <img src={p3}  className="w-[74px] h-[25px]"/>
-        <img src={p4}  className="w-[88px] h-[25px]"/>
-        <img src={p5}  className="w-[80px] h-[25px]"/>
-        <img src={p6}  className="w-[70px] h-[25px]"/>
-        <img src={p7}  className="w-[144px] h-[25px]"/>
-        <img src={p8}  className="w-[81px] h-[25px]"/>
-        {/* <img src={p8} /> */}
-        <img src={p9}  className="w-[86px] h-[25px]"/>
+        <img src={p3} className="w-[74px] h-[25px]" />
+        <img src={p4} className="w-[88px] h-[25px]" />
+        <img src={p5} className="w-[80px] h-[25px]" />
+        <img src={p6} className="w-[70px] h-[25px]" />
+        <img src={p7} className="w-[144px] h-[25px]" />
+        <img src={p8} className="w-[81px] h-[25px]" />
+        <img src={p9} className="w-[86px] h-[25px]" />
         <img src={p13} className="w-[72px] h-[25px]" />
-      
-
       </footer>
     </div>
   );
