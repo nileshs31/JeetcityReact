@@ -10,7 +10,7 @@ import down from "../Images/down.png";
 import popUp from "../Images/popUp.png";
 import close from "../Images/close.png";
 import {IoIosArrowForward ,IoIosArrowDown} from 'react-icons/io'
-// import { Link } from "react-router-dom";
+
 
 const Australianopen = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -316,6 +316,7 @@ const round = isOpen === true ?'rounded-t-[16px]':'rounded-[16px]'
             console.log(response);
             alert('success');
             setModal(false)
+            window.location.href="https://sports.jeetcity.com/en/tennis/australian-open-men-singles-l-4"
             setFinalName('')
             setName2('')
             setName3('')
