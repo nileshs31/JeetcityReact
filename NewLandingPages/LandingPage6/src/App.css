@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "east";
+  src: url(./Fonts/Eastman-Bold.otf)
+}
+
+@font-face {
+  font-family: "eastregular";
+  src: url(./Fonts/Eastman-Regular.otf)
+}
+
+@font-face {
+  font-family: "eastmedium";
+  src: url(./Fonts/Eastman-Medium.otf)
+}
+
+
+@font-face {
+  font-family: "normal";
+  src: url(./Fonts/Fontspring-DEMO-engram-regular.otf)
+}
+
+
+.eastman {
+  font-family: 'east';
+}
+
+.er{
+  font-family: 'eastregular';
+}
+
+.em{
+  font-family: 'eastmedium';
+}
+
+
+.BGimage {
+  background-image: url("Images/bgMob.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1100px;
+  padding-top: 1px;
+}
+.buttonsText{
+  top:30%;
+  left:20%; 
+  font-size: 80%;
+}
+
+@media (min-width: 400px) {
+  .buttonsText{
+    top:30%;
+    left:20%; 
+    font-size: 100%;
+  }
+} 
+
+@media (min-width: 500px) {
+  .BGimage {
+  background-image: url("Images/bgTab.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+  .buttonsText{
+    top:35%;
+    left:20%; 
+    font-size: 100%;
+  }
+} 
+
+@media (min-width: 600px) {
+  .BGimage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 950px;
+  }
+} 
+
+@media (min-width: 768px) {
+  .BGimage {
+  background-image: url("Images/bgTab.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+} 
+
+@media (min-width: 960px) {
+  .BGimage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 950px;
+  }
+} 
+
+
+@media (min-width: 1024px) {
+  .BGimage {
+  background-image: url("Images/bgdesktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 790px;
+  padding-top: 1px;
+  }
+  .buttonsText{
+    top:28%;
+    left:22%; 
+    font-size: 100%;
+  }
+} 
+
+@media (min-width: 1280px) {
+  .BGimage {
+  background-image: url("Images/bgdesktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 790px;
+  padding-top: 1px;
+  }
+  .buttonsText{
+    top:35%;
+    left:22%;
+  }
+} 
+
+
+@media (min-width: 1900px) {
+  .BGimage {
+    background-image: url("Images/bgdesktop.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-bottom: 41.14%;
+  }
+}
