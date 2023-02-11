@@ -90,3 +90,34 @@
     max-width: 100%;
   }
 }
+
+
+@media (min-width: 426px) and (max-width: 630px) {
+  .m {
+    margin-top: -50px;
+  }
+}
+
+@media (min-width: 631px) and (max-width: 760px) {
+  .m {
+    margin-top: -140px;
+  }
+}
+
+@media (min-width: 762px) and (max-width: 1150px) {
+  .m {
+    margin-top: -100px;
+  }
+}
+
+@media (min-width: 1151px) and (max-width: 1150px) {
+  .m {
+    margin-top: -100px;
+  }
+}
+
+@media (min-width: 1152px) and (max-width: 1450px) {
+  .m {
+    margin-top: -50px;
+  }
+}

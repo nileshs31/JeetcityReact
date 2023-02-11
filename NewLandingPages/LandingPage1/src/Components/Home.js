@@ -29,7 +29,7 @@ const Home = () => {
       {/*Home section  */}
       <div className="">
         <div className="flex flex-col item-center gap-5 lg:ml-28 lg:mt-5 px-8 ">
-          <div className=" text-[24px] pt-5 sm:text-[30px] lg:text-[40px] font-bold eastman pl-1 ">
+          <div className=" text-[30px] pt-5 sm:text-[30px] lg:text-[40px] font-bold eastman pl-1 ">
             <h2 className=" text-center lg:text-start mt-10">
               Activate your <span className="text-[#f67409]">promocode</span> 
             </h2>
@@ -49,7 +49,7 @@ const Home = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-3 items-center lg:items-start  lg:-mt-43">
+          <div className="flex flex-col text-gray-400 gap-3 items-center lg:items-start  lg:-mt-43">
             <div className="p-2 flex flex-col gap-3 w-full em">
               <div className="flex justify-start sm:justify-center lg:justify-start pt-3">
                 <img
@@ -94,13 +94,17 @@ const Home = () => {
               </div>
 
               {/* btn */}
-              <button className="rounded-xl p-3 em hidden lg:inline text-center bg-[#48b415] w-[220px]  mt-5">
+              <button className="rounded-xl text-white p-3 em hidden lg:inline text-center bg-[#48b415] w-[220px]  mt-5">
+                Play
+              </button>
+
+                 <button className=" b rounded-xl text-white em p-3   text-center bg-[#48b415] w-full lg:hidden  mt-3">
                 Play
               </button>
             </div>
 
             {/* features */}
-            <div className="em w-auto grid lg:grid-cols-3 gap-2 lg:gap-0 z-10 my-1 mt-3 xl:mt-5">
+            <div className="em w-auto grid text-white  lg:grid-cols-3 gap-2 lg:gap-0 z-10 my-1 mt-3 xl:mt-5">
               <div className="relative">
                 <img 
                 src={bg1} 
@@ -141,7 +145,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <button className="rounded-xl em p-3 lg:hidden  text-center bg-[#48b415] w-full lg:hidden  mt-3">
+              <button className=" b2 rounded-xl em p-3 lg:hidden  text-center bg-[#48b415] w-full lg:hidden  mt-3">
                 Play
               </button>
             </div>

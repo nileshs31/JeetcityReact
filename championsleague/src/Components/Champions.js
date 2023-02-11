@@ -170,7 +170,8 @@ const Champions = () => {
       </header>
 
       {/*home section  */}
-      <div className="bgg w-full   h-[500px] object-cover no-repeat bg-center">
+     
+   <section className="bgg w-full  h-[500px] object-cover no-repeat bg-center">
         <div className=" 2xl:max-w-[85%] max-w-[95%] mx-auto lg:gap-10 px-[24px] lg:px-10 py-10 sm:py-0  flex flex-col-reverse items-center justify-center sm:flex-row xl:gap-5 lg:gap-2 place-items-center  ">
           <div className="w-full">
             <p className=" text-[20px]  md:text-[24px] text-center sm:text-start">
@@ -186,10 +187,12 @@ const Champions = () => {
             className=" xl:w-[462px] xl:h-[448px] md:w-[395px] md:h-[382px] sm:w-[316px] sm:h-[306px] w-[184px] h-[178px] "
           />
         </div>
-      </div>
+      </section>
+    
+   
 
       {/* bet section */}
-      <div className="2xl:max-w-[85%] max-w-[95%] my-[52px] mx-auto">
+      <div className="  m 2xl:max-w-[85%] max-w-[95%]  mx-auto">
         <p className="text-[22px] eastman text-center ">What should I do?</p>
         <p className="text-center text-[#CED2E0] er text-[16px]">
           Для прогноза необходимо нажать на одну из команд, или на Draw
@@ -369,7 +372,7 @@ const Champions = () => {
               onClick={() => {
                 setModal(true);
               }}
-              className="bg-[#48B415] my-6 text-center em p-3 px-6 rounded-xl"
+              className="bg-[#48B415] mt-6 text-center em p-3 px-6 rounded-xl"
             >
               {" "}
               Confirm Prediction{" "}
@@ -380,7 +383,7 @@ const Champions = () => {
 
       {/* features */}
 
-      <div className=" 2xl:max-w-[85%] max-w-[95%] p-[30px] my-[62px] mx-auto bg-[#1F222E] rounded-[32px]">
+      <div className=" 2xl:max-w-[85%] max-w-[95%] p-[30px] my-[22px] mx-auto bg-[#1F222E] rounded-[32px]">
         <div>
           <p className="xl:text-[20px] sm:text-[18px] text-[16px] mt-8 eastman text-center ">
             What can i win ?
@@ -461,15 +464,14 @@ const Champions = () => {
       </div>
       {isOpen ? (
         <div className="rounded-b-[16px] er 2xl:max-w-[85%] max-w-[95%] mx-auto h-auto bg-[#272B3B] er transition-all mb-5 p-5 text-lg ">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-            voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-            fugiat iusto fuga praesentium optio, eaque rerum! Provident
-            similique accusantium nemo autem. Veritatis obcaecati tenetur iure
-            eius earum ut molestias architecto voluptate aliquam nihil, eveniet
-            aliquid culpa officia aut!
-          </p>
+         <ol className="text-white flex flex-col gap-4">  
+ <li className="text-sm">1. <span className="text-sm">Create an account with JeetCity and deposit at least ₹500.</span></li> 
+ <li className="text-sm">2. <span className="text-sm">Use code IC1 in the Bonus Code field.</span></li>  
+ <li className="text-sm">3. <span className="text-sm">And explore your first playroom with a royal bonus🔥.</span></li>  
+ 
+
+
+</ol>  
         </div>
       ) : (
         ""
