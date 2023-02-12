@@ -483,7 +483,7 @@ const Champions = () => {
       {modal ? (
         <FullScreenModal>
           <div className="">
-            <div className=" my-5 relative container h-auto rounded-[24px] mx-auto bg-[#272B3B] p-4">
+            <div className=" my-5 relative h-auto rounded-[24px] mx-auto bg-[#272B3B] p-4 container">
               <img
                 src={close}
                 onClick={() => {
